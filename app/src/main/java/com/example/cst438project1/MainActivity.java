@@ -32,5 +32,6 @@ public class MainActivity extends AppCompatActivity {
     {
         Intent intent = new Intent(this, ViewCourse.class);
         startActivity(intent);
+        // THIS IS A TEST COMMIT
     }
 }
