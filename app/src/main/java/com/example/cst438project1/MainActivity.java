@@ -12,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
     //Button Declarations
     private Button mViewCourses;
 
+    Button jakesButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Interface Definitions
         mViewCourses = (Button) findViewById(R.id.courseButton);
+
+        jakesButton = (Button) findViewById(R.id.jakebutton);
 
         mViewCourses.setOnClickListener(new View.OnClickListener() {
             @Override
