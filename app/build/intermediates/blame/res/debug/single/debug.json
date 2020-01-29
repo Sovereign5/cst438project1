@@ -1292,6 +1292,10 @@
         "source": "C:\\Users\\chris\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable-hdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
+        "merged": "C:\\Users\\chris\\Desktop\\CST438-GroupB-Project1-master\\cst438project1\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_view_course.xml.flat",
+        "source": "C:\\Users\\chris\\Desktop\\CST438-GroupB-Project1-master\\cst438project1\\app\\src\\main\\res\\layout\\activity_view_course.xml"
+    },
+    {
         "merged": "C:\\Users\\chris\\Desktop\\CST438-GroupB-Project1-master\\cst438project1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
         "source": "C:\\Users\\chris\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
