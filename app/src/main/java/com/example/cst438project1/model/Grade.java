@@ -8,8 +8,8 @@ import androidx.room.PrimaryKey;
 @Entity
 public class Grade {
     @PrimaryKey(autoGenerate = true)
-    @NonNull
     private int gradeID;
+    @NonNull
     private char score;
     @NonNull
     private int assignmentID;
@@ -40,30 +40,6 @@ public class Grade {
         this.score = score;
     }
 
-    public int getAssignmentID() {
-        return assignmentID;
-    }
-
-    public void setAssignmentID(int assignmentID) {
-        this.assignmentID = assignmentID;
-    }
-
-    public int getStudentID() {
-        return studentID;
-    }
-
-    public void setStudentID(int studentID) {
-        this.studentID = studentID;
-    }
-
-    public int getCourseID() {
-        return courseID;
-    }
-
-    public void setCourseID(int courseID) {
-        this.courseID = courseID;
-    }
-
     @NonNull
     public String getDateEarned() {
         return dateEarned;
@@ -71,14 +47,6 @@ public class Grade {
 
     public void setDateEarned(@NonNull String dateEarned) {
         this.dateEarned = dateEarned;
-    }
-
-    public int getGradeID() {
-        return gradeID;
-    }
-
-    public void setGradeID(int gradeID) {
-        this.gradeID = gradeID;
     }
 
     @Override

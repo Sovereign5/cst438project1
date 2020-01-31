@@ -8,8 +8,8 @@ import androidx.room.PrimaryKey;
 @Entity
 public class Assignment {
     @PrimaryKey(autoGenerate = true)
-    @NonNull
     private int assignmentID;
+    @NonNull
     private String details;
     @NonNull
     private float maxScore;
@@ -79,30 +79,6 @@ public class Assignment {
 
     public void setDueDate(@NonNull String dueDate) {
         this.dueDate = dueDate;
-    }
-
-    public int getCategoryID() {
-        return categoryID;
-    }
-
-    public void setCategoryID(int categoryID) {
-        this.categoryID = categoryID;
-    }
-
-    public int getCourseID() {
-        return courseID;
-    }
-
-    public void setCourseID(int courseID) {
-        this.courseID = courseID;
-    }
-
-    public int getAssignmentID() {
-        return assignmentID;
-    }
-
-    public void setAssignmentID(int assignmentID) {
-        this.assignmentID = assignmentID;
     }
 
     @Override

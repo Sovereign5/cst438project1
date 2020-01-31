@@ -44,6 +44,17 @@
 25-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:17:27-74
 26            </intent-filter>
 27        </activity>
-28    </application>
-29
-30</manifest>
+28
+29        <provider
+29-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/george_castro/.gradle/caches/transforms-2/files-2.1/6fbf654d3db04d7d9e48eb73ccf59f45/lifecycle-process-2.0.0/AndroidManifest.xml:23:9-27:43
+30            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+30-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/george_castro/.gradle/caches/transforms-2/files-2.1/6fbf654d3db04d7d9e48eb73ccf59f45/lifecycle-process-2.0.0/AndroidManifest.xml:24:13-79
+31            android:authorities="com.example.cst438project1.lifecycle-process"
+31-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/george_castro/.gradle/caches/transforms-2/files-2.1/6fbf654d3db04d7d9e48eb73ccf59f45/lifecycle-process-2.0.0/AndroidManifest.xml:25:13-69
+32            android:exported="false"
+32-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/george_castro/.gradle/caches/transforms-2/files-2.1/6fbf654d3db04d7d9e48eb73ccf59f45/lifecycle-process-2.0.0/AndroidManifest.xml:26:13-37
+33            android:multiprocess="true" />
+33-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/george_castro/.gradle/caches/transforms-2/files-2.1/6fbf654d3db04d7d9e48eb73ccf59f45/lifecycle-process-2.0.0/AndroidManifest.xml:27:13-40
+34    </application>
+35
+36</manifest>

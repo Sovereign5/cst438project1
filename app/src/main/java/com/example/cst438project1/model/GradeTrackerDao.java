@@ -7,7 +7,16 @@ import androidx.room.Query;
 import androidx.room.Update;
 
 @Dao
-public interface AssignmentDAO {
+public interface GradeTrackerDao {
+
+    @Insert
+    void addGrade(Grade grade);
+
+    @Update
+    void updateGrade(Grade grade);
+
+    @Delete
+    void deleteGrade(Grade grade);
 
     @Query("select * from Assignment where " +
             "assignmentID = :assignmentID and categoryID = :categoryID")
