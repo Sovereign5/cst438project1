@@ -11,11 +11,11 @@
 9-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml:5:5-20:19
+11-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml:5:5-22:19
 12        android:allowBackup="true"
 12-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-13-->[androidx.core:core:1.0.1] C:\Users\JakeFahy\.gradle\caches\transforms-2\files-2.1\8f8ab13dc8f4e84e14a8bb3d9ac92bc4\core-1.0.1\AndroidManifest.xml:22:18-86
+13-->[androidx.core:core:1.1.0] C:\Users\JakeFahy\.gradle\caches\transforms-2\files-2.1\e9dab9c67c1ee3668e0bbf86c6d8cbd8\core-1.1.0\AndroidManifest.xml:24:18-86
 14        android:debuggable="true"
 15        android:icon="@mipmap/ic_launcher"
 15-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml:7:9-43
@@ -27,23 +27,29 @@
 18-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml:10:9-35
 19        android:theme="@style/AppTheme" >
 19-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml:11:9-40
-20        <activity android:name="com.example.cst438project1.ViewCourse" />
-20-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml:12:9-57
-20-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml:12:19-45
-21        <activity android:name="com.example.cst438project1.MainActivity" >
-21-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml:13:9-19:20
-21-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml:13:19-47
-22            <intent-filter>
-22-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml:14:13-18:29
-23                <action android:name="android.intent.action.MAIN" />
-23-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml:15:17-69
-23-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml:15:25-66
-24
-25                <category android:name="android.intent.category.LAUNCHER" />
-25-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml:17:17-77
-25-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml:17:27-74
-26            </intent-filter>
-27        </activity>
-28    </application>
-29
-30</manifest>
+20        <activity android:name="com.example.cst438project1.AddCoursePage" />
+20-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml:12:9-60
+20-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml:12:19-48
+21        <activity android:name="com.example.cst438project1.UserPage" />
+21-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml:13:9-46
+21-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml:13:19-43
+22        <activity android:name="com.example.cst438project1.ViewCourse" />
+22-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml:14:9-48
+22-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml:14:19-45
+23        <activity android:name="com.example.cst438project1.MainActivity" >
+23-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml:15:9-21:20
+23-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml:15:19-47
+24            <intent-filter>
+24-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml:16:13-20:29
+25                <action android:name="android.intent.action.MAIN" />
+25-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml:17:17-69
+25-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml:17:25-66
+26
+27                <category android:name="android.intent.category.LAUNCHER" />
+27-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml:19:17-77
+27-->C:\Users\JakeFahy\Desktop\cst438project1\app\src\main\AndroidManifest.xml:19:27-74
+28            </intent-filter>
+29        </activity>
+30    </application>
+31
+32</manifest>

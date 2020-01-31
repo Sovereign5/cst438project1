@@ -679,7 +679,6 @@ id beginning
 id blocking
 id bottom
 id button
-id button2
 id button3
 id button4
 id buttonPanel
@@ -694,6 +693,7 @@ id clip_vertical
 id collapseActionView
 id content
 id contentPanel
+id courseButton
 id custom
 id customPanel
 id decor_content_parent
@@ -829,6 +829,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout activity_view_course
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big

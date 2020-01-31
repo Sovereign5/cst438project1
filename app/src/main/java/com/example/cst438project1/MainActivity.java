@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     //Button Declarations
     private Button mViewCourses;
 
-    Button jakesButton;
+    Button jakeButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         // Interface Definitions
         mViewCourses = (Button) findViewById(R.id.courseButton);
 
-        jakesButton = (Button) findViewById(R.id.jakebutton);
+        jakeButton = (Button) findViewById(R.id.jakebutton);
 
         mViewCourses.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,5 +36,6 @@ public class MainActivity extends AppCompatActivity {
     {
         Intent intent = new Intent(this, ViewCourse.class);
         startActivity(intent);
+        // THIS IS A TEST COMMIT
     }
 }
