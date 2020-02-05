@@ -14,17 +14,17 @@ import com.example.cst438project1.DB.CourseLog;
 public interface CourseDAO {
 
     @Insert
-    void insert(CourseDAO... courseDAOS);
+    void insert(CourseLog... courseLogs);
 
     @Update
-    void update(CourseDAO... courseDAOS);
+    void update(CourseLog... courseLogs);
 
     @Delete
-    void delete(CourseDAO courseDAO);
+    void delete(CourseLog courseLog);
 
     @Query("SELECT * FROM " + CourseDatabase.COURSELOG_TABLE)
-    List<CourseLog> getGymLogs();
+    List<CourseLog> getCourseLogs();
 
-    @Query("SELECT * FROM " + CourseDatabase.COURSELOG_TABLE + " WHERE mLogId = :logID")
+    @Query("SELECT * FROM " + CourseDatabase.COURSELOG_TABLE + " WHERE mCourseID = :logID")
     CourseLog getQuestionWithId(int logID);
 }

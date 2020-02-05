@@ -564,6 +564,10 @@
         "source": "C:\\Users\\chris\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
+        "merged": "C:\\Users\\chris\\Desktop\\CST438-GroupB-Project1-master\\cst438project1\\app\\build\\intermediates\\res\\merged\\debug\\layout_login.xml.flat",
+        "source": "C:\\Users\\chris\\Desktop\\CST438-GroupB-Project1-master\\cst438project1\\app\\src\\main\\res\\layout\\login.xml"
+    },
+    {
         "merged": "C:\\Users\\chris\\Desktop\\CST438-GroupB-Project1-master\\cst438project1\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_activity_chooser_view_list_item.xml.flat",
         "source": "C:\\Users\\chris\\.gradle\\caches\\transforms-2\\files-2.1\\697f71c0c12135256cbfe98df498a7e4\\appcompat-1.0.2\\res\\layout\\abc_activity_chooser_view_list_item.xml"
     },

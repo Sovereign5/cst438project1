@@ -46,44 +46,52 @@ public class CourseLog {
      * ALL The getters and setters for variables used by database
      * Getter for CourseID added
      */
-    public String getmInstructor() {
+    public String getInstructor() {
         return mInstructor;
     }
 
-    public void setmInstructor(String mInstructor) {
-        this.mInstructor = mInstructor;
+    public void setInstructor(String instructor) {
+        mInstructor = instructor;
     }
 
-    public String getmTitle() {
+    public String getTitle() {
         return mTitle;
     }
 
-    public void setmTitle(String mTitle) {
-        this.mTitle = mTitle;
+    public void setTitle(String title) {
+        mTitle = title;
     }
 
-    public String getmDescription() {
+    public String getDescription() {
         return mDescription;
     }
 
-    public void setmDescription(String mDescription) {
-        this.mDescription = mDescription;
+    public void setDescription(String description) {
+        mDescription = description;
     }
 
-    public String getmStartDate() {
+    public String getStartDate() {
         return mStartDate;
     }
 
-    public void setmStartDate(String mStartDate) {
-        this.mStartDate = mStartDate;
+    public void setStartDate(String startDate) {
+        mStartDate = startDate;
     }
 
-    public String getmEndDate() {
+    public String getEndDate() {
         return mEndDate;
     }
 
-    public void setmEndDate(String mEndDate) {
-        this.mEndDate = mEndDate;
+    public void setEndDate(String endDate) {
+        mEndDate = endDate;
+    }
+
+    public int getCourseID() {
+        return mCourseID;
+    }
+
+    public void setCourseID(int courseID) {
+        mCourseID = courseID;
     }
 
     /** JavaDoc for equals, hashcode, and toString
