@@ -61,7 +61,7 @@ public class CourseTest {
      * 2/4/2020 Successfully passed test
      */
     @Test
-    public void insert() {
+    public void update() {
         CourseLog testValue = new CourseLog("Instructor", "CST101",
                 "Test Description", "1/1/1970", "1/1/2020");
 
