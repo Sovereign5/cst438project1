@@ -58,6 +58,26 @@ public class CourseTest {
     }
 
     /** Test case for insert()
+     * Test Fails: Line 73, assertEquals not equal
+     * testValue, CourseID == 0
+     * DBvalue.get(0), courseID == 1
+     * This is likely because of the @autoGenerate = true over in CourseLog.java
+     */
+    @Test
+    public void insert() {
+        CourseLog testValue = new CourseLog("Instructor", "CST101",
+                "Test Description", "1/1/1970", "1/1/2020");
+
+        courseDao.insert(testValue);
+        List<CourseLog> DBvalue = courseDao.getCourseLogs();
+        assertEquals(1, DBvalue.size());
+
+        assertEquals(testValue.getDescription(), DBvalue.get(0).getDescription());
+        assertEquals(testValue, DBvalue.get(0));
+    }
+
+
+    /** Test case for update()
      * 2/4/2020 Successfully passed test
      */
     @Test
