@@ -6,8 +6,10 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
+import java.util.List;
+
 @Dao
-public interface GradeTrackerDao {
+public interface GradeDAO {
 
     @Insert
     void addGrade(Grade grade);
@@ -22,13 +24,7 @@ public interface GradeTrackerDao {
             "assignmentID = :assignmentID and categoryID = :categoryID")
     Assignment getFromCourse(int assignmentID, int categoryID);
 
-    @Update
-    void updateAssignment(Assignment assignment);
-
-    @Insert
-    void addAssignment(Assignment assignment);
-
-    @Delete
-    void deleteAssignment(Assignment assignment);
+    @Query("select * from " + AppDatabase.GRADE_TABLE)
+    List<Grade> getAllGrades();
 
 }

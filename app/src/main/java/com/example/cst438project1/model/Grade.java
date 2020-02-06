@@ -32,6 +32,38 @@ public class Grade {
         this.dateEarned = dateEarned;
     }
 
+    public int getGradeID() {
+        return gradeID;
+    }
+
+    public void setGradeID(int gradeID) {
+        this.gradeID = gradeID;
+    }
+
+    public int getAssignmentID() {
+        return assignmentID;
+    }
+
+    public void setAssignmentID(int assignmentID) {
+        this.assignmentID = assignmentID;
+    }
+
+    public int getStudentID() {
+        return studentID;
+    }
+
+    public void setStudentID(int studentID) {
+        this.studentID = studentID;
+    }
+
+    public int getCourseID() {
+        return courseID;
+    }
+
+    public void setCourseID(int courseID) {
+        this.courseID = courseID;
+    }
+
     public char getScore() {
         return score;
     }

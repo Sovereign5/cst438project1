@@ -38,6 +38,30 @@ public class Assignment {
         this.courseID = courseID;
     }
 
+    public int getAssignmentID() {
+        return assignmentID;
+    }
+
+    public int getCategoryID() {
+        return categoryID;
+    }
+
+    public int getCourseID() {
+        return courseID;
+    }
+
+    public void setAssignmentID(int assignmentID) {
+        this.assignmentID = assignmentID;
+    }
+
+    public void setCategoryID(int categoryID) {
+        this.categoryID = categoryID;
+    }
+
+    public void setCourseID(int courseID) {
+        this.courseID = courseID;
+    }
+
     @NonNull
     public String getDetails() {
         return details;
