@@ -30,7 +30,17 @@ public class MainActivity extends AppCompatActivity {
                 launchViewCourses();
             }
         });
+
+        jakeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,UserPage.class);
+                startActivity(intent);
+            }
+        });
+
     }
+
 
     private void launchViewCourses()
     {

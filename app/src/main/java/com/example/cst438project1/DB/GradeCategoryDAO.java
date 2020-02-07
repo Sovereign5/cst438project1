@@ -23,7 +23,10 @@ public interface GradeCategoryDAO {
     @Delete
     void delete(GradeCategory gradeCategory);
 
-    @Query("SELECT * FROM " + AppDatabase.GRADE_CATEGORY_TABLE)
-    List<GradeCategory> getGradeCategories;
+    @Query("SELECT * FROM " + AppDatabase.GRADE_CATEGORY_TABLE )
+    List<GradeCategory> getGradeCategories();
+
+    @Query("DELETE FROM " + AppDatabase.GRADE_CATEGORY_TABLE + " WHERE CategoryId = :categoryID")
+    void deleteByCatId(long categoryID);
 
 }

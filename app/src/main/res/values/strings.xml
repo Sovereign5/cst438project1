@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">cst438project1</string>
-    <string name="userdeftext">Hello User</string>
+    <string name="userdeftext">Hello</string>
     <string name="addCourseButton">Add Course</string>
     <string name="deleteCourseButton">Delete Course</string>
+    <string name="addCoursePageTItle">Adding New Course</string>
+    <string name="courseTitlePlaceHolder">Enter Course Title</string>
+    <string name="courseInstructorPlaceHolder">Enter Course Instructor</string>
+    <string name="courseStartDatePlaceHolder">Enter Course Start Date</string>
+    <string name="courseEndDatePlaceHolder">Enter Course End Date</string>
+    <string name="courseDescriptionPlaceHolder">Enter Course Description</string>
+    <string name="addCourseSubmitButtonName">Create Course</string>
 </resources>

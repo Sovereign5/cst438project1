@@ -7,8 +7,19 @@
     tools:context=".UserPage">
 
     <TextView
+        android:id="@+id/usernameTextView"
+        android:layout_width="57dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="157dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/helloTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/helloTextView"
-        android:layout_width="105dp"
+        android:layout_width="57dp"
         android:layout_height="31dp"
         android:layout_marginStart="140dp"
         android:layout_marginTop="16dp"
@@ -49,5 +60,17 @@
         android:text="@string/deleteCourseButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dividerLine" />
+
+    <LinearLayout
+        android:id="@+id/courseDisplayLayout"
+        android:layout_width="329dp"
+        android:layout_height="515dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="46dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

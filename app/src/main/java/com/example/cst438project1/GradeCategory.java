@@ -1,7 +1,10 @@
 package com.example.cst438project1;
 
 
+import android.os.AsyncTask;
+
 import com.example.cst438project1.DB.AppDatabase;
+import com.example.cst438project1.DB.GradeCategoryDAO;
 
 import java.util.Objects;
 
@@ -19,6 +22,11 @@ public class GradeCategory {
     private double weight;
 
     private int GradeId;
+
+    public GradeCategory() {
+        title = "Unknown CLASS";
+        weight = 100.00;
+    }
 
     public GradeCategory(String sTitle, double sWeight, int sGradeId) {
         title = sTitle;
