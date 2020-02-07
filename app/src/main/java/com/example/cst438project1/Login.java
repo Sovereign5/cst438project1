@@ -56,12 +56,13 @@ public class Login extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         boolean x = correctAccount();
-                        if(x = true){
+                        if(x){
                             Toast.makeText(Login.this, "Login", Toast.LENGTH_LONG).show();
                             mSubmit.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
                                     //sending to the next screen
+                                    //need to figure out the next screen
                                 }
                             });
                         }
