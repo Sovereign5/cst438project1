@@ -26,5 +26,8 @@ public interface CourseDAO {
     List<CourseLog> getCourseLogs();
 
     @Query("SELECT * FROM " + CourseDatabase.COURSELOG_TABLE + " WHERE mCourseID = :logID")
-    CourseLog getQuestionWithId(int logID);
+    CourseLog getCourseWithId(int logID);
+
+//    @Query("SELECT * FROM " + CourseDatabase.COURSELOG_TABLE + " WHERE mInstructor = :logID")
+//    CourseLog getInstructorWithId(int logID);
 }
