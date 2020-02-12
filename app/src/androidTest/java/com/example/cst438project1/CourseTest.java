@@ -97,5 +97,35 @@ public class CourseTest {
         CourseLog updated = DBValueUpdated.get(0);
         assertEquals(testValue.getDescription(), updated.getDescription());
     }
-}
 
+
+    /** Test case for delete()
+     * 2/9/2020 Successfully passed test
+     */
+    @Test
+    public void delete() {
+        CourseLog testValue = new CourseLog("Instructor", "CST101",
+                "Test Description", "1/1/1970", "1/1/2020");
+
+
+        List<CourseLog> oldDBValue = courseDao.getCourseLogs();
+        assertEquals(0, oldDBValue.size());
+        courseDao.insert(testValue);
+
+        List<CourseLog> newDBValue = courseDao.getCourseLogs();
+        assertNotEquals(oldDBValue.size(), newDBValue.size());
+    }
+
+    @Test
+    public void getCourseWithId() {
+        CourseLog testValue = new CourseLog("Instructor", "CST101",
+                "Test Description", "1/1/1970", "1/1/2020");
+
+        courseDao.insert(testValue);
+        List<CourseLog> DBValue = courseDao.getCourseLogs();
+        CourseLog course = DBValue.get(0);
+        int somethingID = course.getCourseID();
+        CourseLog newthing = courseDao.getCourseWithId(somethingID);
+        assertEquals(newthing.getInstructor(), testValue.getInstructor());
+    }
+}
