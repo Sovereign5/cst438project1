@@ -32,10 +32,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void launchViewCourses()
-    {
+    private void launchViewCourses() {
         Intent intent = new Intent(this, ViewCourse.class);
         startActivity(intent);
-        // THIS IS A TEST COMMIT
     }
 }

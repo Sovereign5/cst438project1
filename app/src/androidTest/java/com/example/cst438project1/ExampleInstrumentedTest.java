@@ -2,11 +2,20 @@ package com.example.cst438project1;
 
 import android.content.Context;
 
+import androidx.room.Room;
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
+import com.example.cst438project1.DB.CourseDAO;
+import com.example.cst438project1.DB.CourseDatabase;
+import com.example.cst438project1.DB.CourseLog;
+
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -25,3 +34,4 @@ public class ExampleInstrumentedTest {
         assertEquals("com.example.cst438project1", appContext.getPackageName());
     }
 }
+
