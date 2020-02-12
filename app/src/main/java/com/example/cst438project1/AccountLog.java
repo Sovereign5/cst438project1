@@ -6,6 +6,8 @@ import androidx.room.PrimaryKey;
 
 import com.example.cst438project1.DB.AppDatabase;
 
+import java.util.ArrayList;
+
 @Entity(tableName = AppDatabase.ACCOUNTLOG_TABLE)
 public class AccountLog {
 
@@ -26,4 +28,6 @@ public class AccountLog {
     @ColumnInfo(name = "last_name")
     private String lastname;
 
+    @ColumnInfo(name = "courses")
+    private ArrayList usercourses;
 }
