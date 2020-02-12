@@ -1,14 +1,14 @@
 package com.example.cst438project1;
 
 
-import com.example.cst438project1.DB.AppDatabase;
+import com.example.cst438project1.DB.CourseCategoryDatabase;
 
 import java.util.Objects;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = AppDatabase.GRADE_CATEGORY_TABLE)
+@Entity(tableName = CourseCategoryDatabase.GRADE_CATEGORY_TABLE)
 public class GradeCategory {
 
     @PrimaryKey(autoGenerate = true)
