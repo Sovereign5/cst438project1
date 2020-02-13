@@ -9,13 +9,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class UserPage extends AppCompatActivity {
 
     Button addCourseButton;
 
-    LinearLayout courseDisplayLayout;
+    ListView courseDisplayLayout;
 
     TextView userNameDisplay;
 
@@ -25,7 +26,7 @@ public class UserPage extends AppCompatActivity {
         setContentView(R.layout.activity_user_page);
 
         addCourseButton = (Button) findViewById(R.id.addCourseButton);
-        courseDisplayLayout = (LinearLayout) findViewById(R.id.courseDisplayLayout);
+        courseDisplayLayout = (ListView) findViewById(R.id.courseDisplayListView);
         userNameDisplay = (TextView) findViewById(R.id.usernameTextView);
 
         //Waiting for DB's to be setup before I can fill this in
