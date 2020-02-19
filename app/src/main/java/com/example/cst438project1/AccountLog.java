@@ -1,5 +1,7 @@
 package com.example.cst438project1;
 
+import android.accounts.Account;
+
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -30,4 +32,14 @@ public class AccountLog {
 
     @ColumnInfo(name = "courses")
     private ArrayList usercourses;
+
+    public AccountLog(String firstname, String lastname, String username, String password){
+
+        username = username;
+        password = password;
+        firstname = firstname;
+        lastname = lastname;
+
+    }
+
 }

@@ -1,5 +1,7 @@
 package com.example.cst438project1.DB;
 
+import android.widget.EditText;
+
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -12,6 +14,7 @@ import java.util.List;
 
 @Dao
 public interface AccountLogDAO {
+
     @Insert
     void insert(AccountLog... accountLogs);
 
@@ -29,5 +32,6 @@ public interface AccountLogDAO {
 
     @Query("SELECT * FROM " +AppDatabase.ACCOUNTLOG_TABLE + " WHERE username LIKE :user AND " + " password LIKE :pass LIMIT 1")
     boolean findCredentials(String user, String pass);
+
 
 }
