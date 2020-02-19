@@ -20,10 +20,6 @@ public interface GradeDAO {
     @Delete
     void deleteGrade(Grade grade);
 
-    @Query("select * from Assignment where " +
-            "assignmentID = :assignmentID and categoryID = :categoryID")
-    Assignment getFromCourse(int assignmentID, int categoryID);
-
     @Query("select * from " + AppDatabase.GRADE_TABLE)
     List<Grade> getAllGrades();
 
