@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.cst438project1.model.AppDatabase;
+
 public class MainActivity extends AppCompatActivity {
 
     //Button Declarations
@@ -16,9 +18,12 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        AppDatabase db = AppDatabase.getAppDatabase(getBaseContext());
+        db.getAssignmentDAO();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        AppDatabase.getAppDatabase(MainActivity.this).loadData(this);
         // Interface Definitions
         mViewCourses = (Button) findViewById(R.id.courseButton);
 
