@@ -24,6 +24,6 @@ public interface GradeCategoryDAO {
     void delete(GradeCategory gradeCategory);
 
     @Query("SELECT * FROM " + CourseCategoryDatabase.GRADE_CATEGORY_TABLE)
-    List<GradeCategory> getGradeCategories;
+    List<GradeCategory> getGradeCategories();
 
 }

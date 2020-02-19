@@ -7,10 +7,22 @@
     tools:context=".UserPage">
 
     <TextView
-        android:id="@+id/helloTextView"
-        android:layout_width="105dp"
+        android:id="@+id/usernameTextView"
+        android:layout_width="50dp"
         android:layout_height="31dp"
-        android:layout_marginStart="140dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="153dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/helloTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/helloTextView"
+        android:layout_width="50dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="146dp"
         android:layout_marginTop="16dp"
         android:text="@string/userdeftext"
         android:textSize="20sp"
@@ -49,5 +61,16 @@
         android:text="@string/deleteCourseButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dividerLine" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/userPageRecycler"
+        android:layout_width="344dp"
+        android:layout_height="519dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="37dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

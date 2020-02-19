@@ -132,6 +132,11 @@ attr editTextStyle
 attr elevation
 attr emptyVisibility
 attr expandActivityOverflowButtonDrawable
+attr fastScrollEnabled
+attr fastScrollHorizontalThumbDrawable
+attr fastScrollHorizontalTrackDrawable
+attr fastScrollVerticalThumbDrawable
+attr fastScrollVerticalTrackDrawable
 attr firstBaselineToTopHeight
 attr font
 attr fontFamily
@@ -162,6 +167,7 @@ attr itemPadding
 attr keylines
 attr lastBaselineToBottomHeight
 attr layout
+attr layoutManager
 attr layout_anchor
 attr layout_anchorGravity
 attr layout_behavior
@@ -259,6 +265,8 @@ attr radioButtonStyle
 attr ratingBarStyle
 attr ratingBarStyleIndicator
 attr ratingBarStyleSmall
+attr recyclerViewStyle
+attr reverseLayout
 attr searchHintIcon
 attr searchIcon
 attr searchViewStyle
@@ -270,11 +278,13 @@ attr showDividers
 attr showText
 attr showTitle
 attr singleChoiceItemLayout
+attr spanCount
 attr spinBars
 attr spinnerDropDownItemStyle
 attr spinnerStyle
 attr splitTrack
 attr srcCompat
+attr stackFromEnd
 attr state_above_anchor
 attr statusBarBackground
 attr subMenuArrow
@@ -514,6 +524,9 @@ dimen compat_notification_large_icon_max_height
 dimen compat_notification_large_icon_max_width
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
+dimen fastscroll_default_thickness
+dimen fastscroll_margin
+dimen fastscroll_minimum_range
 dimen highlight_alpha_material_colored
 dimen highlight_alpha_material_dark
 dimen highlight_alpha_material_light
@@ -521,6 +534,9 @@ dimen hint_alpha_material_dark
 dimen hint_alpha_material_light
 dimen hint_pressed_alpha_material_dark
 dimen hint_pressed_alpha_material_light
+dimen item_touch_helper_max_drag_scroll_per_frame
+dimen item_touch_helper_swipe_escape_max_velocity
+dimen item_touch_helper_swipe_escape_velocity
 dimen notification_action_icon_size
 dimen notification_action_text_size
 dimen notification_big_circle_margin
@@ -651,6 +667,39 @@ id FUNCTION
 id META
 id SHIFT
 id SYM
+id accessibility_action_clickable_span
+id accessibility_custom_action_0
+id accessibility_custom_action_1
+id accessibility_custom_action_10
+id accessibility_custom_action_11
+id accessibility_custom_action_12
+id accessibility_custom_action_13
+id accessibility_custom_action_14
+id accessibility_custom_action_15
+id accessibility_custom_action_16
+id accessibility_custom_action_17
+id accessibility_custom_action_18
+id accessibility_custom_action_19
+id accessibility_custom_action_2
+id accessibility_custom_action_20
+id accessibility_custom_action_21
+id accessibility_custom_action_22
+id accessibility_custom_action_23
+id accessibility_custom_action_24
+id accessibility_custom_action_25
+id accessibility_custom_action_26
+id accessibility_custom_action_27
+id accessibility_custom_action_28
+id accessibility_custom_action_29
+id accessibility_custom_action_3
+id accessibility_custom_action_30
+id accessibility_custom_action_31
+id accessibility_custom_action_4
+id accessibility_custom_action_5
+id accessibility_custom_action_6
+id accessibility_custom_action_7
+id accessibility_custom_action_8
+id accessibility_custom_action_9
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -671,6 +720,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addCourseButton
 id alertTitle
 id all
 id always
@@ -679,9 +729,10 @@ id barrier
 id beginning
 id blocking
 id bottom
-id button
+id button2
 id button3
 id button4
+id button5
 id buttonPanel
 id center
 id center_horizontal
@@ -695,26 +746,36 @@ id collapseActionView
 id content
 id contentPanel
 id courseButton
+id creaccTitle
 id custom
 id customPanel
 id decor_content_parent
 id default_activity_button
+id deleteCourseButton
+id dialog_button
 id dimensions
 id direct
 id disableHome
+id dividerLine
 id editText
 id editText2
 id edit_query
 id end
+id enterFirstNameID
+id enterLastNameID
+id enterPasswordID
+id enterUserNameID
 id expand_activities_button
 id expanded_menu
 id fill
 id fill_horizontal
 id fill_vertical
+id firstNameID
 id forever
 id gone
 id group_divider
 id groups
+id helloTextView
 id home
 id homeAsUp
 id icon
@@ -724,6 +785,9 @@ id image
 id info
 id invisible
 id italic
+id item_touch_helper_previous_elevation
+id jakebutton
+id lastNameID
 id left
 id line1
 id line3
@@ -779,6 +843,11 @@ id start
 id submenuarrow
 id submit_area
 id tabMode
+id tag_accessibility_actions
+id tag_accessibility_clickable_spans
+id tag_accessibility_heading
+id tag_accessibility_pane_title
+id tag_screen_reader_focusable
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
@@ -797,6 +866,8 @@ id topPanel
 id uniform
 id up
 id useLogo
+id userNameID
+id usernameTextView
 id withText
 id wrap
 id wrap_content
@@ -833,8 +904,12 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_add_course_page
 layout activity_main
+layout activity_user_page
 layout activity_view_course
+layout create_account
+layout custom_dialog
 layout login
 layout notification_action
 layout notification_action_tombstone
@@ -887,9 +962,12 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string addCourseButton
 string app_name
+string deleteCourseButton
 string search_menu_title
 string status_bar_notification_info_overflow
+string userdeftext
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
@@ -1275,6 +1353,7 @@ styleable MenuView android_windowAnimationStyle android_itemTextAppearance andro
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor
 styleable PopupWindowBackgroundState state_above_anchor
 styleable RecycleListView paddingBottomNoButtons paddingTopNoTitle
+styleable RecyclerView android_orientation android_clipToPadding android_descendantFocusability fastScrollEnabled fastScrollHorizontalThumbDrawable fastScrollHorizontalTrackDrawable fastScrollVerticalThumbDrawable fastScrollVerticalTrackDrawable layoutManager reverseLayout spanCount stackFromEnd
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
 styleable Spinner android_entries android_popupBackground android_prompt android_dropDownWidth popupTheme
 styleable StateListDrawable android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration

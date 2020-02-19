@@ -1,5 +1,6 @@
 package com.example.cst438project1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -61,6 +62,10 @@ public class Login extends AppCompatActivity {
                             mSubmit.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
+                                    Intent intent = new Intent(Login.this,UserPage.class);
+                                    intent.putExtra("username",username.getText().toString());
+                                    intent.putExtra("pass", password.getText().toString());
+                                    startActivity(intent);
                                     //sending to the next screen
                                     //need to figure out the next screen
                                 }

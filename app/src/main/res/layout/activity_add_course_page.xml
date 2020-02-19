@@ -6,4 +6,102 @@
     android:layout_height="match_parent"
     tools:context=".AddCoursePage">
 
+    <TextView
+        android:id="@+id/addCoursePageDisplay"
+        android:layout_width="213dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="99dp"
+        android:text="@string/addCourseDisplay"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/addCoursePageCourseTitleEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="108dp"
+        android:ems="10"
+        android:hint="@string/courseTitleHint"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addCoursePageDisplay" />
+
+    <EditText
+        android:id="@+id/addCoursePageInstructor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="108dp"
+        android:ems="10"
+        android:hint="@string/courseInstructorHint"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addCoursePageCourseTitleEditText" />
+
+    <EditText
+        android:id="@+id/addCourseStartDateEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="108dp"
+        android:ems="10"
+        android:hint="@string/startDateHint"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addCoursePageInstructor" />
+
+    <EditText
+        android:id="@+id/addCourseEndDateEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="108dp"
+        android:ems="10"
+        android:hint="@string/endDateHint"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addCourseStartDateEditText" />
+
+    <EditText
+        android:id="@+id/addCourseDescriptionEditText"
+        android:layout_width="226dp"
+        android:layout_height="113dp"
+        android:layout_marginStart="97dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="97dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/addCourseDescriptionHint"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addCourseEndDateEditText" />
+
+    <Button
+        android:id="@+id/addCourseCreateCourseButton"
+        android:layout_width="151dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginBottom="95dp"
+        android:text="@string/addCourseSubmitButtonText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

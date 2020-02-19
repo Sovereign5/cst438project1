@@ -1,0 +1,51 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "04c261ad690270b2ac579cf9247de657",
+    "entities": [
+      {
+        "tableName": "grade_category_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`CategoryId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `title` TEXT, `weight` REAL NOT NULL, `GradeId` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "CategoryId",
+            "columnName": "CategoryId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "weight",
+            "columnName": "weight",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "GradeId",
+            "columnName": "GradeId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "CategoryId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"04c261ad690270b2ac579cf9247de657\")"
+    ]
+  }
+}

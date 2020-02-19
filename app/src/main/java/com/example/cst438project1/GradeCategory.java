@@ -26,6 +26,14 @@ public class GradeCategory {
         GradeId = sGradeId;
     }
 
+    public GradeCategory() {
+        title = "Unknown";
+        weight = 100.00;
+        GradeId = 22;
+
+    }
+
+
     public String getTitle() {
         return title;
     }
@@ -57,20 +65,5 @@ public class GradeCategory {
     public void setCategoryId(int categoryId) {
         CategoryId = categoryId;
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        GradeCategory that = (GradeCategory) o;
-        return CategoryId == that.CategoryId &&
-                Double.compare(that.weight, weight) == 0 &&
-                GradeId == that.GradeId &&
-                Objects.equals(title, that.title);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(CategoryId, title, weight, GradeId);
-    }
 }
+

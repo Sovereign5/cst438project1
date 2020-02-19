@@ -1,0 +1,63 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "390d35edc2e07a22b5bbc76a5888dbd6",
+    "entities": [
+      {
+        "tableName": "courselog",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`mCourseID` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `mInstructor` TEXT, `mTitle` TEXT, `mDescription` TEXT, `mStartDate` TEXT, `mEndDate` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "mCourseID",
+            "columnName": "mCourseID",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mInstructor",
+            "columnName": "mInstructor",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mTitle",
+            "columnName": "mTitle",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mDescription",
+            "columnName": "mDescription",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mStartDate",
+            "columnName": "mStartDate",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mEndDate",
+            "columnName": "mEndDate",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "mCourseID"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"390d35edc2e07a22b5bbc76a5888dbd6\")"
+    ]
+  }
+}

@@ -25,9 +25,13 @@ public interface AccountLogDAO {
     List<AccountLog> getAccountLog();
 
     @Query("SELECT * FROM " + AppDatabase.ACCOUNTLOG_TABLE + " WHERE mAccountID = :accountID")
-    AccountLog getQuestionWithId(int accountID);
+    AccountLog getAccountWithId(int accountID);
 
     @Query("SELECT * FROM " +AppDatabase.ACCOUNTLOG_TABLE + " WHERE username LIKE :user AND " + " password LIKE :pass LIMIT 1")
     boolean findCredentials(String user, String pass);
+
+    @Query("SELECT * FROM " +AppDatabase.ACCOUNTLOG_TABLE + " WHERE username LIKE :user AND " + " password LIKE :pass LIMIT 1")
+    AccountLog findAccount(String user, String pass);
+
 
 }

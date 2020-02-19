@@ -3,10 +3,14 @@ package com.example.cst438project1;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+import androidx.room.TypeConverters;
 
 import com.example.cst438project1.DB.AppDatabase;
+import com.example.cst438project1.DB.ArrayListTypeConverter;
+import com.example.cst438project1.DB.CourseLog;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity(tableName = AppDatabase.ACCOUNTLOG_TABLE)
 public class AccountLog {
@@ -29,5 +33,75 @@ public class AccountLog {
     private String lastname;
 
     @ColumnInfo(name = "courses")
-    private ArrayList usercourses;
+    @TypeConverters(ArrayListTypeConverter.class)
+    private List<CourseLog> userCourses;
+
+
+    public AccountLog(String firstname, String lastname, String username, String password){
+
+        this.username = username;
+        this.password = password;
+        this.firstname = firstname;
+        this.lastname = lastname;
+
+        userCourses = new ArrayList<>();
+
+    }
+
+
+    public int getAccountId() {
+        return mAccountId;
+    }
+
+
+
+    public void setAccountId(int mAccountId) {
+        this.mAccountId = mAccountId;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public List<CourseLog> getUserCourses() {
+        return userCourses;
+    }
+
+    public void setUserCourses(List<CourseLog> userCourses) {
+        this.userCourses = userCourses;
+    }
+
+    public void insertCourse(CourseLog newCourse) {
+        userCourses.add(newCourse);
+    }
+
+
 }
