@@ -62,11 +62,11 @@ public class ExampleInstrumentedTest {
 
     }
 
-    // Passed all tests
     @Test
     public void insert() {
-
-        // Testing getters & setters for Assignment
+        /////////////////////////
+        // @Insert for Assignment
+        /////////////////////////
         Assignment assignmentTestValue = new Assignment("Homework",
                 100, 84, "02/09/2020",
                 "02/20/2020", 1, 2);
@@ -74,35 +74,33 @@ public class ExampleInstrumentedTest {
         List<Assignment> assignmentDBValue = assignmentDAO.getAllAssignments();
 
         assertEquals(1, assignmentDBValue.size());
-        assertEquals(assignmentTestValue.getAssignedDate(), assignmentDBValue.get(0).getAssignedDate());
-        assertEquals(assignmentTestValue.getDetails(), assignmentDBValue.get(0).getDetails());
-        assertEquals(assignmentTestValue.getEarnedScore(), assignmentDBValue.get(0).getEarnedScore(), 0.0);
-        assertEquals(assignmentTestValue.getMaxScore(), assignmentDBValue.get(0).getMaxScore(), 0.0);
 
-        // Testing getters & setters for Grade
+        ////////////////////
+        // @Insert for Grade
+        ////////////////////
         Grade gradeTestValue = new Grade('A', 1 ,
                     1, 1, "02/07/2020");
         gradeDAO.addGrade(gradeTestValue);
         List<Grade> gradeDBValue = gradeDAO.getAllGrades();
 
         assertEquals(1, gradeDBValue.size());
-        assertEquals(gradeTestValue.getScore(), gradeDBValue.get(0).getScore());
-        assertEquals(gradeTestValue.getAssignmentID(), gradeDBValue.get(0).getAssignmentID());
-        assertEquals(gradeTestValue.getStudentID(), gradeDBValue.get(0).getStudentID());
-        assertEquals(gradeTestValue.getCourseID(), gradeDBValue.get(0).getCourseID());
-        assertEquals(gradeTestValue.getDateEarned(), gradeDBValue.get(0).getDateEarned());
+
 
     }
 
+    // Passed all tests
     @Test
     public void update() {
-        // Update for Assignment
+        /////////////////////////////
+        // @Update for Assignment DAO
+        /////////////////////////////
         Assignment assignmentTestValue = new Assignment("Homework",
                 100, 84, "02/09/2020",
                 "02/20/2020", 1, 2);
         assignmentDAO.addAssignment(assignmentTestValue);
         List<Assignment> assignmentDBValue = assignmentDAO.getAllAssignments();
 
+        // Updating values
         assignmentTestValue = assignmentDBValue.get(0);
         assignmentTestValue.setAssignedDate("03/20/2020");
         assignmentTestValue.setDetails("Quiz");
@@ -115,23 +113,70 @@ public class ExampleInstrumentedTest {
         List<Assignment> assignmentDBValueUpdated = assignmentDAO.getAllAssignments();
         Assignment assignmentUpdated = assignmentDBValueUpdated.get(0);
 
+        assertEquals(assignmentTestValue.getAssignedDate(), assignmentUpdated.getAssignedDate());
         assertEquals(assignmentTestValue.getDetails(), assignmentUpdated.getDetails());
+        assertEquals(assignmentTestValue.getDueDate(), assignmentUpdated.getDueDate());
+        assertEquals(assignmentTestValue.getEarnedScore(), assignmentUpdated.getEarnedScore(), 0);
+        assertEquals(assignmentTestValue.getMaxScore(), assignmentUpdated.getMaxScore(), 0);
 
-        // Update for Grade
+        ////////////////////////
+        // @Update for Grade DAO
+        ////////////////////////
         Grade gradeTestValue = new Grade('A', 1 ,
                 1, 1, "02/07/2020");
         gradeDAO.addGrade(gradeTestValue);
         List<Grade> gradeDBValue = gradeDAO.getAllGrades();
 
+        // Updating values
+        gradeTestValue = gradeDBValue.get(0);
         gradeTestValue.setScore('B');
+        gradeTestValue.setAssignmentID(2);
+        gradeTestValue.setStudentID(2);
+        gradeTestValue.setDateEarned("03/08/2020");
 
         gradeDAO.updateGrade(gradeTestValue);
         List<Grade> gradeDBValueUpdated = gradeDAO.getAllGrades();
         Grade gradeUpdated = gradeDBValueUpdated.get(0);
 
         assertEquals(gradeTestValue.getScore(), gradeUpdated.getScore());
+        assertEquals(gradeTestValue.getAssignmentID(), gradeUpdated.getAssignmentID());
+        assertEquals(gradeTestValue.getStudentID(), gradeUpdated.getStudentID());
+        assertEquals(gradeTestValue.getDateEarned(), gradeUpdated.getDateEarned());
     }
 
+    @Test
+    public void delete() {
+        /////////////////////////////
+        // @Delete for Assignment DAO
+        /////////////////////////////
+        Assignment assignmentTestValue = new Assignment("Homework",
+        100, 84, "02/09/2020",
+        "02/20/2020", 1, 2);
+        assignmentDAO.addAssignment(assignmentTestValue);
+        List<Assignment> assignmentDBValue = assignmentDAO.getAllAssignments();
+
+        assertEquals(1, assignmentDBValue.size());
+
+        assignmentDAO.deleteAssignment(assignmentTestValue);
+
+        List<Assignment> deletedAssignmentDAO = assignmentDAO.getAllAssignments();
+        assertEquals(1, deletedAssignmentDAO.size());
+
+        ////////////////////////
+        // @Delete for Grade DAO
+        ////////////////////////
+        Grade gradeTestValue = new Grade('A', 1 ,
+                1, 1, "02/07/2020");
+        gradeDAO.addGrade(gradeTestValue);
+        List<Grade> gradeDBValue = gradeDAO.getAllGrades();
+
+        assertEquals(1, gradeDBValue.size());
+
+        gradeDAO.deleteGrade(gradeTestValue);
+
+        List<Grade> deletedGradeDAO = gradeDAO.getAllGrades();
+        assertEquals(1, deletedGradeDAO.size());
+    }
 
 
 

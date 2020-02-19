@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:2:1-22:12
-INJECTED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:2:1-22:12
-INJECTED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:2:1-22:12
-INJECTED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:2:1-22:12
+ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:2:1-37:12
 MERGED from [androidx.room:room-runtime:2.0.0] /Users/george_castro/.gradle/caches/transforms-2/files-2.1/b0f4f77312bb5c88b913605d4bd74d11/room-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.material:material:1.0.0] /Users/george_castro/.gradle/caches/transforms-2/files-2.1/c7eb9cd3508ac3959447c14fd76c9fb9/material-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.0.2] /Users/george_castro/.gradle/caches/transforms-2/files-2.1/697f71c0c12135256cbfe98df498a7e4/appcompat-1.0.2/AndroidManifest.xml:17:1-22:12
@@ -41,25 +41,25 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/george_castro/.gra
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/george_castro/.gradle/caches/transforms-2/files-2.1/c75155371656c04dff3a027cdeb13e8a/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /Users/george_castro/.gradle/caches/transforms-2/files-2.1/53b4a4cf87c0ff501a8c414cec884555/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/george_castro/.gradle/caches/transforms-2/files-2.1/3a992d8307f21a8f15eb649383ba6a6a/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:2:1-22:12
-INJECTED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:2:1-22:12
-INJECTED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:2:1-37:12
 	package
 		ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:3:5-41
 		INJECTED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml
-		ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:2:1-22:12
+		ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:2:1-37:12
 		INJECTED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml
-		ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:2:1-22:12
+		ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:2:1-37:12
 		INJECTED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:5:5-20:19
+ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:5:5-35:19
 MERGED from [com.google.android.material:material:1.0.0] /Users/george_castro/.gradle/caches/transforms-2/files-2.1/c7eb9cd3508ac3959447c14fd76c9fb9/material-1.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] /Users/george_castro/.gradle/caches/transforms-2/files-2.1/c7eb9cd3508ac3959447c14fd76c9fb9/material-1.0.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/george_castro/.gradle/caches/transforms-2/files-2.1/3ec6fa8458ddbe732478393a9f9e6c77/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
@@ -86,24 +86,28 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] /Users/george_castro/.g
 		ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:6:9-35
 	android:theme
 		ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:11:9-40
-activity#com.example.cst438project1.ViewCourse
-ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:12:9-57
-	android:name
-		ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:12:19-45
 activity#com.example.cst438project1.MainActivity
-ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:13:9-19:20
+ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:14:9-20:20
 	android:name
-		ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:13:19-47
+		ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:14:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:14:13-18:29
+ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:15:13-19:29
 action#android.intent.action.MAIN
-ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:15:17-69
+ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:16:17-69
 	android:name
-		ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:15:25-66
+		ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:16:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:17:17-77
+ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:18:17-77
 	android:name
-		ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:17:27-74
+		ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:18:27-74
+activity#com.example.cst438project1.AssignmentActivity
+ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:21:9-27:20
+	android:name
+		ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:21:19-53
+activity#com.example.cst438project1.GradeActivity
+ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:28:9-34:20
+	android:name
+		ADDED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:28:19-48
 uses-sdk
 INJECTED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml

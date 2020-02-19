@@ -1113,6 +1113,7 @@ id image
 id info
 id invisible
 id italic
+id item_id
 id item_touch_helper_previous_elevation
 id labeled
 id largeLabel
@@ -1146,6 +1147,7 @@ id pin
 id progress_circular
 id progress_horizontal
 id radio
+id recycler_view
 id right
 id right_icon
 id right_side
@@ -1273,7 +1275,9 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout activity_view_assignment
 layout activity_view_course
+layout activity_view_grade
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1288,6 +1292,7 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout item
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action

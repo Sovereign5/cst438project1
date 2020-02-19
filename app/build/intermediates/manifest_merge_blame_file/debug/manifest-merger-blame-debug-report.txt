@@ -11,7 +11,7 @@
 9-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml
 10
 11    <application
-11-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:5:5-20:19
+11-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:5:5-35:19
 12        android:allowBackup="true"
 12-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -28,34 +28,59 @@
 19        android:testOnly="true"
 20        android:theme="@style/AppTheme" >
 20-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:11:9-40
-21        <activity android:name="com.example.cst438project1.ViewCourse" />
-21-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:12:9-57
-21-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:12:19-45
-22        <activity android:name="com.example.cst438project1.MainActivity" >
-22-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:13:9-19:20
-22-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:13:19-47
-23            <intent-filter>
-23-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:14:13-18:29
-24                <action android:name="android.intent.action.MAIN" />
-24-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:15:17-69
-24-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:15:25-66
-25
-26                <category android:name="android.intent.category.LAUNCHER" />
-26-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:17:17-77
-26-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:17:27-74
-27            </intent-filter>
-28        </activity>
-29
-30        <provider
-30-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/george_castro/.gradle/caches/transforms-2/files-2.1/6fbf654d3db04d7d9e48eb73ccf59f45/lifecycle-process-2.0.0/AndroidManifest.xml:23:9-27:43
-31            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-31-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/george_castro/.gradle/caches/transforms-2/files-2.1/6fbf654d3db04d7d9e48eb73ccf59f45/lifecycle-process-2.0.0/AndroidManifest.xml:24:13-79
-32            android:authorities="com.example.cst438project1.lifecycle-process"
-32-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/george_castro/.gradle/caches/transforms-2/files-2.1/6fbf654d3db04d7d9e48eb73ccf59f45/lifecycle-process-2.0.0/AndroidManifest.xml:25:13-69
-33            android:exported="false"
-33-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/george_castro/.gradle/caches/transforms-2/files-2.1/6fbf654d3db04d7d9e48eb73ccf59f45/lifecycle-process-2.0.0/AndroidManifest.xml:26:13-37
-34            android:multiprocess="true" />
-34-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/george_castro/.gradle/caches/transforms-2/files-2.1/6fbf654d3db04d7d9e48eb73ccf59f45/lifecycle-process-2.0.0/AndroidManifest.xml:27:13-40
-35    </application>
-36
-37</manifest>
+21        <activity android:name="com.example.cst438project1.MainActivity" >
+21-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:14:9-20:20
+21-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:14:19-47
+22            <intent-filter>
+22-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:15:13-19:29
+23                <action android:name="android.intent.action.MAIN" />
+23-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:16:17-69
+23-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:16:25-66
+24
+25                <category android:name="android.intent.category.LAUNCHER" />
+25-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:18:17-77
+25-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:18:27-74
+26            </intent-filter>
+27        </activity>
+28        <activity android:name="com.example.cst438project1.AssignmentActivity" >
+28-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:21:9-27:20
+28-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:21:19-53
+29            <intent-filter>
+29-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:15:13-19:29
+30                <action android:name="android.intent.action.MAIN" />
+30-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:16:17-69
+30-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:16:25-66
+31
+32                <category android:name="android.intent.category.LAUNCHER" />
+32-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:18:17-77
+32-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:18:27-74
+33            </intent-filter>
+34        </activity>
+35        <activity android:name="com.example.cst438project1.GradeActivity" >
+35-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:28:9-34:20
+35-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:28:19-48
+36            <intent-filter>
+36-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:15:13-19:29
+37                <action android:name="android.intent.action.MAIN" />
+37-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:16:17-69
+37-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:16:25-66
+38
+39                <category android:name="android.intent.category.LAUNCHER" />
+39-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:18:17-77
+39-->/Users/george_castro/StudioProjects/cst438project1/app/src/main/AndroidManifest.xml:18:27-74
+40            </intent-filter>
+41        </activity>
+42
+43        <provider
+43-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/george_castro/.gradle/caches/transforms-2/files-2.1/6fbf654d3db04d7d9e48eb73ccf59f45/lifecycle-process-2.0.0/AndroidManifest.xml:23:9-27:43
+44            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+44-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/george_castro/.gradle/caches/transforms-2/files-2.1/6fbf654d3db04d7d9e48eb73ccf59f45/lifecycle-process-2.0.0/AndroidManifest.xml:24:13-79
+45            android:authorities="com.example.cst438project1.lifecycle-process"
+45-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/george_castro/.gradle/caches/transforms-2/files-2.1/6fbf654d3db04d7d9e48eb73ccf59f45/lifecycle-process-2.0.0/AndroidManifest.xml:25:13-69
+46            android:exported="false"
+46-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/george_castro/.gradle/caches/transforms-2/files-2.1/6fbf654d3db04d7d9e48eb73ccf59f45/lifecycle-process-2.0.0/AndroidManifest.xml:26:13-37
+47            android:multiprocess="true" />
+47-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/george_castro/.gradle/caches/transforms-2/files-2.1/6fbf654d3db04d7d9e48eb73ccf59f45/lifecycle-process-2.0.0/AndroidManifest.xml:27:13-40
+48    </application>
+49
+50</manifest>
