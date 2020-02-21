@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "2b6a4a83ea8f23dbce888baeb7939d7e",
+    "identityHash": "2648b03f7ad1faeb615c1c9c97193f64",
     "entities": [
       {
         "tableName": "accountlog",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`mAccountId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `username` TEXT, `password` TEXT, `first_name` TEXT, `last_name` TEXT, `courses` TEXT)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`mAccountId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `username` TEXT, `password` TEXT, `first_name` TEXT, `last_name` TEXT, `courses` TEXT, `userAssignments` TEXT)",
         "fields": [
           {
             "fieldPath": "mAccountId",
@@ -43,6 +43,12 @@
             "columnName": "courses",
             "affinity": "TEXT",
             "notNull": false
+          },
+          {
+            "fieldPath": "userAssignments",
+            "columnName": "userAssignments",
+            "affinity": "TEXT",
+            "notNull": false
           }
         ],
         "primaryKey": {
@@ -57,7 +63,7 @@
     ],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"2b6a4a83ea8f23dbce888baeb7939d7e\")"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"2648b03f7ad1faeb615c1c9c97193f64\")"
     ]
   }
 }

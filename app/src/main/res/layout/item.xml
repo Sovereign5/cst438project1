@@ -8,6 +8,19 @@
         android:id="@+id/item_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"/>
+        android:layout_margin="20dp"
+        android:textColor="@android:color/background_dark" />
+
+    <Button
+        android:id="@+id/editAssignmentButtonItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/editAssignment" />
+
+    <Button
+        android:id="@+id/deleteAssignButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Delete" />
 
 </LinearLayout>

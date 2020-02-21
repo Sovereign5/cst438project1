@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.cst438project1.model.AppDatabase;
+import com.example.cst438project1.model.AssignmentDatabase;
 import com.example.cst438project1.model.Grade;
 
 import java.util.List;
@@ -21,14 +21,13 @@ public class GradeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        AppDatabase db = AppDatabase.getAppDatabase(getBaseContext());
-        db.loadData(this);
-        db.getAssignmentDAO();
-        grades = AppDatabase.getAppDatabase(this).getGradeDAO().getAllGrades();
-        Log.d("GradeActivity", "Grade size: " + grades.size());
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_assignment);
+        AssignmentDatabase db = AssignmentDatabase.getAppDatabase(getBaseContext());
+        db.loadData(this);
+        db.getAssignmentDAO();
+        grades = AssignmentDatabase.getAppDatabase(this).getGradeDAO().getAllGrades();
+        Log.d("GradeActivity", "Grade size: " + grades.size());
 
         RecyclerView rv = findViewById(R.id.recycler_view);
         rv.setLayoutManager( new LinearLayoutManager(this));

@@ -6,13 +6,234 @@
     android:layout_height="match_parent"
     tools:context=".ViewCourse">
 
-    <ListView
-        android:id="@+id/CourseListView"
-        android:layout_width="0dp"
-        android:layout_height="624dp"
-        android:layout_marginTop="109dp"
+    <Button
+        android:id="@+id/viewCourseReturn"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/returnButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/viewCourseEditCourse" />
+
+    <TextView
+        android:id="@+id/endDateIntro"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="287dp"
+        android:text="@string/EndDateIntro"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startDateIntro" />
+
+    <TextView
+        android:id="@+id/courseDescriptionIntro"
+        android:layout_width="108dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="280dp"
+        android:text="@string/CourseDescriptionIntro"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/endDateIntro" />
+
+    <TextView
+        android:id="@+id/startDateIntro"
+        android:layout_width="121dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="267dp"
+        android:text="@string/StartDateIntro"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructorIntro" />
+
+    <TextView
+        android:id="@+id/viewCourseDisplay"
+        android:layout_width="225dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="93dp"
+        android:text="@string/CourseDisplay"
+        android:textColor="@android:color/background_dark"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="1dp"
+        android:background="@android:color/background_dark"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewCourseDisplay" />
+
+    <TextView
+        android:id="@+id/viewCourseTitle"
+        android:layout_width="161dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="219dp"
+        android:text="@string/courseTitlePlaceHolder"
+        android:textColor="@android:color/background_dark"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <TextView
+        android:id="@+id/viewCourseInstructor"
+        android:layout_width="157dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="108dp"
+        android:text="@string/courseInstructorPlaceHolder"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/instructorIntro"
+        app:layout_constraintTop_toBottomOf="@+id/viewCourseTitle" />
+
+    <TextView
+        android:id="@+id/viewCourseStart"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="79dp"
+        android:text="@string/courseStartPlaceHolder"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/startDateIntro"
+        app:layout_constraintTop_toBottomOf="@+id/viewCourseInstructor" />
+
+    <TextView
+        android:id="@+id/viewCourseEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="88dp"
+        android:text="@string/courseEndPlaceHolder"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/endDateIntro"
+        app:layout_constraintTop_toBottomOf="@+id/viewCourseStart" />
+
+    <TextView
+        android:id="@+id/viewCourseDescription"
+        android:layout_width="172dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="216dp"
+        android:text="@string/courseDescriptionPlaceholder"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/courseDescriptionIntro" />
+
+    <TextView
+        android:id="@+id/instructorIntro"
+        android:layout_width="93dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="23dp"
+        android:text="@string/InstructorIntro"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/viewCourseInstructor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewCourseTitle" />
+
+    <Button
+        android:id="@+id/viewCourseEditCourse"
+        android:layout_width="110dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/editCourseButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/viewCourseReturn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/currentGradesDisplay"
+        android:layout_width="177dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="211dp"
+        android:layout_marginBottom="108dp"
+        android:text="@string/gradeIntro"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/viewCourseEditCourse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewCourseDescription" />
+
+    <TextView
+        android:id="@+id/viewCourseCurrentGrade"
+        android:layout_width="27dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginBottom="192dp"
+        android:text='"A"'
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/currentGradesDisplay"
+        app:layout_constraintTop_toBottomOf="@+id/viewCourseEnd" />
+
+    <Button
+        android:id="@+id/viewAssignments"
+        android:layout_width="153dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="33dp"
+        android:text="@string/viewAssignmentsDisplay"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toEndOf="@+id/viewCourseTitle"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
 </androidx.constraintlayout.widget.ConstraintLayout>

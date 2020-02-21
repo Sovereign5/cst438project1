@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditCourseActivity">
+
+    <EditText
+        android:id="@+id/editCourseEndEditText"
+        android:layout_width="213dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="@string/courseTitleHint"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editCourseStartEditText" />
+
+    <EditText
+        android:id="@+id/editCourseDescriptionEditText"
+        android:layout_width="213dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="@string/courseTitleHint"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editCourseEndEditText" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="1dp"
+        android:background="@android:color/background_dark"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editingCourseIntro" />
+
+    <TextView
+        android:id="@+id/editingCourseIntro"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/Editing"
+        android:textColor="@android:color/background_dark"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/editCourseTitleDisplay"
+        android:layout_width="147dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="64dp"
+        android:text="@string/coursePlaceHolder"
+        android:textColor="@android:color/background_dark"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editCourseTitleEditText"
+        android:layout_width="213dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="@string/courseTitleHint"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider4" />
+
+    <EditText
+        android:id="@+id/editCourseInstructorEditText"
+        android:layout_width="213dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="@string/courseTitleHint"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editCourseTitleEditText" />
+
+    <EditText
+        android:id="@+id/editCourseStartEditText"
+        android:layout_width="213dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="@string/courseTitleHint"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editCourseInstructorEditText" />
+
+    <TextView
+        android:id="@+id/editCourseTitleIntro"
+        android:layout_width="124dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/courseEditer"
+        android:textColor="@android:color/background_dark"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider4" />
+
+    <TextView
+        android:id="@+id/editCourseInstructorIntro"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="35dp"
+        android:text="@string/InstructorIntro"
+        android:textColor="@android:color/background_dark"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editCourseTitleIntro" />
+
+    <TextView
+        android:id="@+id/editCourseStartIntro"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="35dp"
+        android:text="@string/StartDateIntro"
+        android:textColor="@android:color/background_dark"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editCourseInstructorIntro" />
+
+    <TextView
+        android:id="@+id/editCourseEndIntro"
+        android:layout_width="112dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/EndDateIntro"
+        android:textColor="@android:color/background_dark"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editCourseStartIntro" />
+
+    <TextView
+        android:id="@+id/editCourseDescriptionIntro"
+        android:layout_width="119dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="47dp"
+        android:text="@string/CourseDescriptionIntro"
+        android:textColor="@android:color/background_dark"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editCourseEndIntro" />
+
+    <Button
+        android:id="@+id/editCourseConfirmButton"
+        android:layout_width="181dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginBottom="54dp"
+        android:text="@string/editSave"
+        app:layout_constraintBottom_toTopOf="@+id/editCourseReturnButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editCourseDescriptionEditText" />
+
+    <Button
+        android:id="@+id/editCourseReturnButton"
+        android:layout_width="181dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginBottom="89dp"
+        android:text="@string/cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

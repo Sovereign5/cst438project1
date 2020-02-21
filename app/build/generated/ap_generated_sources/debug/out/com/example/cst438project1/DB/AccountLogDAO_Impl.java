@@ -7,6 +7,7 @@ import androidx.room.RoomDatabase;
 import androidx.room.RoomSQLiteQuery;
 import androidx.sqlite.db.SupportSQLiteStatement;
 import com.example.cst438project1.AccountLog;
+import com.example.cst438project1.model.Assignment;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
@@ -19,7 +20,9 @@ public final class AccountLogDAO_Impl implements AccountLogDAO {
 
   private final EntityInsertionAdapter __insertionAdapterOfAccountLog;
 
-  private final ArrayListTypeConverter __arrayListTypeConverter = new ArrayListTypeConverter();
+  private final ArrayListTypeConverterAccounts __arrayListTypeConverterAccounts = new ArrayListTypeConverterAccounts();
+
+  private final ArrayListTypeConverterAssignments __arrayListTypeConverterAssignments = new ArrayListTypeConverterAssignments();
 
   private final EntityDeletionOrUpdateAdapter __deletionAdapterOfAccountLog;
 
@@ -30,7 +33,7 @@ public final class AccountLogDAO_Impl implements AccountLogDAO {
     this.__insertionAdapterOfAccountLog = new EntityInsertionAdapter<AccountLog>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `accountlog`(`mAccountId`,`username`,`password`,`first_name`,`last_name`,`courses`) VALUES (nullif(?, 0),?,?,?,?,?)";
+        return "INSERT OR ABORT INTO `accountlog`(`mAccountId`,`username`,`password`,`first_name`,`last_name`,`courses`,`userAssignments`) VALUES (nullif(?, 0),?,?,?,?,?,?)";
       }
 
       @Override
@@ -57,11 +60,18 @@ public final class AccountLogDAO_Impl implements AccountLogDAO {
           stmt.bindString(5, value.getLastname());
         }
         final String _tmp;
-        _tmp = __arrayListTypeConverter.CourseListToString(value.getUserCourses());
+        _tmp = __arrayListTypeConverterAccounts.CourseListToString(value.getUserCourses());
         if (_tmp == null) {
           stmt.bindNull(6);
         } else {
           stmt.bindString(6, _tmp);
+        }
+        final String _tmp_1;
+        _tmp_1 = __arrayListTypeConverterAssignments.AssignmentsToString(value.getUserAssignments());
+        if (_tmp_1 == null) {
+          stmt.bindNull(7);
+        } else {
+          stmt.bindString(7, _tmp_1);
         }
       }
     };
@@ -79,7 +89,7 @@ public final class AccountLogDAO_Impl implements AccountLogDAO {
     this.__updateAdapterOfAccountLog = new EntityDeletionOrUpdateAdapter<AccountLog>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR ABORT `accountlog` SET `mAccountId` = ?,`username` = ?,`password` = ?,`first_name` = ?,`last_name` = ?,`courses` = ? WHERE `mAccountId` = ?";
+        return "UPDATE OR ABORT `accountlog` SET `mAccountId` = ?,`username` = ?,`password` = ?,`first_name` = ?,`last_name` = ?,`courses` = ?,`userAssignments` = ? WHERE `mAccountId` = ?";
       }
 
       @Override
@@ -106,13 +116,20 @@ public final class AccountLogDAO_Impl implements AccountLogDAO {
           stmt.bindString(5, value.getLastname());
         }
         final String _tmp;
-        _tmp = __arrayListTypeConverter.CourseListToString(value.getUserCourses());
+        _tmp = __arrayListTypeConverterAccounts.CourseListToString(value.getUserCourses());
         if (_tmp == null) {
           stmt.bindNull(6);
         } else {
           stmt.bindString(6, _tmp);
         }
-        stmt.bindLong(7, value.getAccountId());
+        final String _tmp_1;
+        _tmp_1 = __arrayListTypeConverterAssignments.AssignmentsToString(value.getUserAssignments());
+        if (_tmp_1 == null) {
+          stmt.bindNull(7);
+        } else {
+          stmt.bindString(7, _tmp_1);
+        }
+        stmt.bindLong(8, value.getAccountId());
       }
     };
   }
@@ -162,6 +179,7 @@ public final class AccountLogDAO_Impl implements AccountLogDAO {
       final int _cursorIndexOfFirstname = _cursor.getColumnIndexOrThrow("first_name");
       final int _cursorIndexOfLastname = _cursor.getColumnIndexOrThrow("last_name");
       final int _cursorIndexOfUserCourses = _cursor.getColumnIndexOrThrow("courses");
+      final int _cursorIndexOfUserAssignments = _cursor.getColumnIndexOrThrow("userAssignments");
       final List<AccountLog> _result = new ArrayList<AccountLog>(_cursor.getCount());
       while(_cursor.moveToNext()) {
         final AccountLog _item;
@@ -180,8 +198,13 @@ public final class AccountLogDAO_Impl implements AccountLogDAO {
         final List<CourseLog> _tmpUserCourses;
         final String _tmp;
         _tmp = _cursor.getString(_cursorIndexOfUserCourses);
-        _tmpUserCourses = __arrayListTypeConverter.stringToCourseList(_tmp);
+        _tmpUserCourses = __arrayListTypeConverterAccounts.stringToCourseList(_tmp);
         _item.setUserCourses(_tmpUserCourses);
+        final List<Assignment> _tmpUserAssignments;
+        final String _tmp_1;
+        _tmp_1 = _cursor.getString(_cursorIndexOfUserAssignments);
+        _tmpUserAssignments = __arrayListTypeConverterAssignments.stringToAssignments(_tmp_1);
+        _item.setUserAssignments(_tmpUserAssignments);
         _result.add(_item);
       }
       return _result;
@@ -205,6 +228,7 @@ public final class AccountLogDAO_Impl implements AccountLogDAO {
       final int _cursorIndexOfFirstname = _cursor.getColumnIndexOrThrow("first_name");
       final int _cursorIndexOfLastname = _cursor.getColumnIndexOrThrow("last_name");
       final int _cursorIndexOfUserCourses = _cursor.getColumnIndexOrThrow("courses");
+      final int _cursorIndexOfUserAssignments = _cursor.getColumnIndexOrThrow("userAssignments");
       final AccountLog _result;
       if(_cursor.moveToFirst()) {
         final String _tmpUsername;
@@ -222,8 +246,13 @@ public final class AccountLogDAO_Impl implements AccountLogDAO {
         final List<CourseLog> _tmpUserCourses;
         final String _tmp;
         _tmp = _cursor.getString(_cursorIndexOfUserCourses);
-        _tmpUserCourses = __arrayListTypeConverter.stringToCourseList(_tmp);
+        _tmpUserCourses = __arrayListTypeConverterAccounts.stringToCourseList(_tmp);
         _result.setUserCourses(_tmpUserCourses);
+        final List<Assignment> _tmpUserAssignments;
+        final String _tmp_1;
+        _tmp_1 = _cursor.getString(_cursorIndexOfUserAssignments);
+        _tmpUserAssignments = __arrayListTypeConverterAssignments.stringToAssignments(_tmp_1);
+        _result.setUserAssignments(_tmpUserAssignments);
       } else {
         _result = null;
       }
@@ -269,7 +298,7 @@ public final class AccountLogDAO_Impl implements AccountLogDAO {
 
   @Override
   public AccountLog findAccount(String user, String pass) {
-    final String _sql = "SELECT * FROM accountlog WHERE username LIKE ? AND  password LIKE ? LIMIT 1";
+    final String _sql = "SELECT * FROM accountlog WHERE username = ? AND  password = ? LIMIT 1";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 2);
     int _argIndex = 1;
     if (user == null) {
@@ -291,6 +320,7 @@ public final class AccountLogDAO_Impl implements AccountLogDAO {
       final int _cursorIndexOfFirstname = _cursor.getColumnIndexOrThrow("first_name");
       final int _cursorIndexOfLastname = _cursor.getColumnIndexOrThrow("last_name");
       final int _cursorIndexOfUserCourses = _cursor.getColumnIndexOrThrow("courses");
+      final int _cursorIndexOfUserAssignments = _cursor.getColumnIndexOrThrow("userAssignments");
       final AccountLog _result;
       if(_cursor.moveToFirst()) {
         final String _tmpUsername;
@@ -308,8 +338,13 @@ public final class AccountLogDAO_Impl implements AccountLogDAO {
         final List<CourseLog> _tmpUserCourses;
         final String _tmp;
         _tmp = _cursor.getString(_cursorIndexOfUserCourses);
-        _tmpUserCourses = __arrayListTypeConverter.stringToCourseList(_tmp);
+        _tmpUserCourses = __arrayListTypeConverterAccounts.stringToCourseList(_tmp);
         _result.setUserCourses(_tmpUserCourses);
+        final List<Assignment> _tmpUserAssignments;
+        final String _tmp_1;
+        _tmp_1 = _cursor.getString(_cursorIndexOfUserAssignments);
+        _tmpUserAssignments = __arrayListTypeConverterAssignments.stringToAssignments(_tmp_1);
+        _result.setUserAssignments(_tmpUserAssignments);
       } else {
         _result = null;
       }

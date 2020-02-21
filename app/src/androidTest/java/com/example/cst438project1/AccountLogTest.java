@@ -6,6 +6,7 @@ import com.example.cst438project1.DB.AccountLogDAO;
 import com.example.cst438project1.DB.AppDatabase;
 import com.example.cst438project1.DB.CourseDatabase;
 import com.example.cst438project1.DB.CourseLog;
+import com.example.cst438project1.model.Assignment;
 
 import org.junit.After;
 import org.junit.Before;
@@ -77,6 +78,25 @@ public class AccountLogTest {
 
         }
 
+    @Test
+    public void insertAssignment() {
+        AccountLog testAccount = new AccountLog("Test","Run","UserTest","PassTest");
+
+        Assignment testAssignment = new Assignment("Test",100,90,"Today","Tommorow",0,1);
+
+        testAccount.insertAssignment(testAssignment);
+
+        accountLogDAO.insert(testAccount);
+        List<AccountLog> DBvals = accountLogDAO.getAccountLog();
+
+        List<Assignment> userTestAssignments = DBvals.get(0).getUserAssignments();
+
+        assertEquals(testAssignment.getDetails(),userTestAssignments.get(0).getDetails());
+
+
+
+    }
+
 
         @Test
         public void insert() {
@@ -87,7 +107,11 @@ public class AccountLogTest {
             assertEquals(1, DBvalue.size());
 
             assertEquals(testValue.getFirstname(), DBvalue.get(0).getFirstname());
-            assertEquals(testValue, DBvalue.get(0));
+            assertEquals(testValue.getLastname(), DBvalue.get(0).getLastname());
+            assertEquals(testValue.getUsername(), DBvalue.get(0).getUsername());
+            assertEquals(testValue.getPassword(), DBvalue.get(0).getPassword());
+
+
         }
 
 
@@ -106,6 +130,28 @@ public class AccountLogTest {
             List<AccountLog> DBValueUpdated = accountLogDAO.getAccountLog();
             AccountLog updated = DBValueUpdated.get(0);
             assertEquals(testValue.getUsername(), updated.getUsername());
+        }
+
+        // Simulating testValue3 trying to login
+        @Test
+        public void login() {
+            AccountLog testValue = new AccountLog("Test1","Run","UserTest1","PassTest");
+            AccountLog testValue2 = new AccountLog("Test2","Run","UserTest2","PassTest");
+            AccountLog testValue3 = new AccountLog("Test3","Run","UserTest3","PassTest");
+            AccountLog testValue4 = new AccountLog("Test4","Run","UserTest4","PassTest");
+
+            accountLogDAO.insert(testValue);
+            accountLogDAO.insert(testValue2);
+            accountLogDAO.insert(testValue3);
+            accountLogDAO.insert(testValue4);
+
+            AccountLog user3 = accountLogDAO.findAccount(testValue3.getUsername(),testValue3.getPassword());
+
+            assertEquals(testValue3.getUsername(),user3.getUsername());
+            assertEquals(testValue3.getPassword(),user3.getPassword());
+            assertEquals(testValue3.getFirstname(),user3.getFirstname());
+
+
         }
 
 

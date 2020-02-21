@@ -2,6 +2,7 @@ package com.example.cst438project1;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +20,7 @@ public class Login extends AppCompatActivity {
     EditText password;
 
     Button mSubmit;
+    Button createLink;
 
     AccountLogDAO mAccountLog;
 
@@ -34,50 +36,58 @@ public class Login extends AppCompatActivity {
 
         //Submit button
         mSubmit = findViewById(R.id.button2);
+        createLink = (Button) findViewById(R.id.createAccountLink);
 
         //AccountLogDAO
         mAccountLog = Room.databaseBuilder(this, AppDatabase.class, AppDatabase.dbName)
                 .allowMainThreadQueries()
                 .build()
                 .getAccountLogDAO();
-    }
 
-    private boolean correctAccount() {
 
-        String name = username.getText().toString();
-        String pw = password.getText().toString();
 
-        return mAccountLog.findCredentials(name, pw);
-
-    }
-
-    public void submit(){
         mSubmit.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        boolean x = correctAccount();
-                        if(x){
-                            Toast.makeText(Login.this, "Login", Toast.LENGTH_LONG).show();
-                            mSubmit.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    Intent intent = new Intent(Login.this,UserPage.class);
-                                    intent.putExtra("username",username.getText().toString());
-                                    intent.putExtra("pass", password.getText().toString());
-                                    startActivity(intent);
-                                    //sending to the next screen
-                                    //need to figure out the next screen
-                                }
-                            });
+                        String usernameInput = username.getText().toString();
+                        String passwordInput = password.getText().toString();
+                        if(mAccountLog.findCredentials(usernameInput,passwordInput)){
+                            toastMaker("Login Successful");
+                            Intent intent = new Intent(Login.this,UserPage.class);
+                            intent.putExtra("username",usernameInput);
+                            intent.putExtra("pass", passwordInput);
+                            startActivity(intent);
                         }
                         else{
-                            Toast.makeText(Login.this, "Incorrect Username/Password", Toast.LENGTH_LONG).show();
+                            toastMaker("Incorrect Username/Password");
                         }
 
                     }
                 }
         );
+
+
+        createLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Login.this,CreateAccount.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
     }
+
+    private void toastMaker(String message){
+        Toast t = Toast.makeText(this.getApplicationContext(),message,Toast.LENGTH_LONG );
+        //Using CENTER_VERTICAL to make Dylan happy.
+        t.setGravity(Gravity.CENTER_VERTICAL,0,0);
+        t.show();
+    }
+
+
 
 }

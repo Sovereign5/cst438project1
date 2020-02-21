@@ -14,7 +14,7 @@ import androidx.room.Room;
 import com.example.cst438project1.DB.AccountLogDAO;
 import com.example.cst438project1.DB.AppDatabase;
 
-public class CreateAccount extends AppCompatActivity implements OnClickListener {
+public class CreateAccount extends AppCompatActivity {
     private EditText firstnameText;
     private EditText lastnameText;
     private EditText usernameText;
@@ -33,10 +33,10 @@ public class CreateAccount extends AppCompatActivity implements OnClickListener 
         firstnameText = findViewById(R.id.enterFirstNameID);
         lastnameText = findViewById(R.id.enterLastNameID);
         usernameText = findViewById(R.id.enterUserNameID);
-        passwordText = findViewById(R.id.enterPasswordID);
+        passwordText = findViewById(R.id.enterPasswordeditText);
 
         //Enter Button
-        continueButton = findViewById(R.id.button5);
+        continueButton = findViewById(R.id.createAccountButtonSubmit);
 
         //AccountLogDAO
         mAccountLog = Room.databaseBuilder(this, AppDatabase.class, AppDatabase.dbName)
@@ -44,26 +44,25 @@ public class CreateAccount extends AppCompatActivity implements OnClickListener 
                 .build()
                 .getAccountLogDAO();
 
-    }
 
-    public void addAccount(){
         continueButton.setOnClickListener(
                 new OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Toast.makeText(CreateAccount.this, "New Account Created", Toast.LENGTH_LONG).show();
                         AccountLog newUser = new AccountLog(firstnameText.getText().toString(), lastnameText.getText().toString(), usernameText.getText().toString(), passwordText.getText().toString() );
+                        if(mAccountLog.findCredentials(newUser.getUsername(),newUser.getPassword())) {
+                            Toast.makeText(CreateAccount.this, "Account Already Exists", Toast.LENGTH_LONG).show();
+                            return;
+                        }
+                        Toast.makeText(CreateAccount.this, "New Account Created", Toast.LENGTH_LONG).show();
                         mAccountLog.insert(newUser);
-                        //redirect to the userpage
+                        Intent intent = new Intent(CreateAccount.this,UserPage.class);
+                        intent.putExtra("username",newUser.getUsername());
+                        intent.putExtra("pass", newUser.getPassword());
+                        startActivity(intent);
                     }
                 }
         );
-    }
-
-
-
-    @Override
-    public void onClick(View v) {
 
     }
 }

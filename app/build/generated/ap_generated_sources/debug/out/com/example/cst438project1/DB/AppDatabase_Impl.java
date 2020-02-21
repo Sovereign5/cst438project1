@@ -28,9 +28,9 @@ public final class AppDatabase_Impl extends AppDatabase {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `accountlog` (`mAccountId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `username` TEXT, `password` TEXT, `first_name` TEXT, `last_name` TEXT, `courses` TEXT)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `accountlog` (`mAccountId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `username` TEXT, `password` TEXT, `first_name` TEXT, `last_name` TEXT, `courses` TEXT, `userAssignments` TEXT)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"2b6a4a83ea8f23dbce888baeb7939d7e\")");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"2648b03f7ad1faeb615c1c9c97193f64\")");
       }
 
       @Override
@@ -60,13 +60,14 @@ public final class AppDatabase_Impl extends AppDatabase {
 
       @Override
       protected void validateMigration(SupportSQLiteDatabase _db) {
-        final HashMap<String, TableInfo.Column> _columnsAccountlog = new HashMap<String, TableInfo.Column>(6);
+        final HashMap<String, TableInfo.Column> _columnsAccountlog = new HashMap<String, TableInfo.Column>(7);
         _columnsAccountlog.put("mAccountId", new TableInfo.Column("mAccountId", "INTEGER", true, 1));
         _columnsAccountlog.put("username", new TableInfo.Column("username", "TEXT", false, 0));
         _columnsAccountlog.put("password", new TableInfo.Column("password", "TEXT", false, 0));
         _columnsAccountlog.put("first_name", new TableInfo.Column("first_name", "TEXT", false, 0));
         _columnsAccountlog.put("last_name", new TableInfo.Column("last_name", "TEXT", false, 0));
         _columnsAccountlog.put("courses", new TableInfo.Column("courses", "TEXT", false, 0));
+        _columnsAccountlog.put("userAssignments", new TableInfo.Column("userAssignments", "TEXT", false, 0));
         final HashSet<TableInfo.ForeignKey> _foreignKeysAccountlog = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesAccountlog = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoAccountlog = new TableInfo("accountlog", _columnsAccountlog, _foreignKeysAccountlog, _indicesAccountlog);
@@ -77,7 +78,7 @@ public final class AppDatabase_Impl extends AppDatabase {
                   + " Found:\n" + _existingAccountlog);
         }
       }
-    }, "2b6a4a83ea8f23dbce888baeb7939d7e", "4415b60b0055a685d389ac73403acdd3");
+    }, "2648b03f7ad1faeb615c1c9c97193f64", "51842b07d03f415080867152cc0817c2");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)

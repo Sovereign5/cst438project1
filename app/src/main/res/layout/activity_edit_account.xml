@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".editAccount">
+
+    <EditText
+        android:id="@+id/editPasswordEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="59dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="@string/placeHolder"
+        app:layout_constraintBottom_toTopOf="@+id/editUserSaveButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPasswordIntro" />
+
+    <EditText
+        android:id="@+id/editUsernameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/placeHolder"
+        app:layout_constraintBottom_toTopOf="@+id/editPasswordIntro"
+        app:layout_constraintEnd_toEndOf="@+id/editPasswordEditText"
+        app:layout_constraintStart_toStartOf="@+id/editPasswordIntro"
+        app:layout_constraintTop_toBottomOf="@+id/editUsernameIntro" />
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="25dp"
+        android:background="@android:color/background_dark"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/editFirstIntro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editUsernameDisplay" />
+
+    <TextView
+        android:id="@+id/editUsernameDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginBottom="19dp"
+        android:text="@string/usernamePlaceholder"
+        android:textColor="@android:color/background_dark"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/divider5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editUserIntro"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/editUserIntro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginEnd="7dp"
+        android:text="@string/editing"
+        android:textColor="@android:color/background_dark"
+        android:textSize="25sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editUsernameDisplay"
+        app:layout_constraintEnd_toStartOf="@+id/editUsernameDisplay"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/editFirstIntro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="18dp"
+        android:text="@string/firstname"
+        android:textColor="@android:color/background_dark"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/editFirstEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider5" />
+
+    <TextView
+        android:id="@+id/editLastIntro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="13dp"
+        android:text="@string/lastname"
+        android:textColor="@android:color/background_dark"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/editLastEditText"
+        app:layout_constraintEnd_toEndOf="@+id/editUsernameIntro"
+        app:layout_constraintStart_toStartOf="@+id/editLastEditText"
+        app:layout_constraintTop_toBottomOf="@+id/editFirstEditText" />
+
+    <TextView
+        android:id="@+id/editUsernameIntro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:text="@string/username"
+        android:textColor="@android:color/background_dark"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/editUsernameEditText"
+        app:layout_constraintEnd_toEndOf="@+id/editFirstIntro"
+        app:layout_constraintStart_toStartOf="@+id/editUsernameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/editLastEditText" />
+
+    <TextView
+        android:id="@+id/editPasswordIntro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="17dp"
+        android:text="@string/password"
+        android:textColor="@android:color/background_dark"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/editPasswordEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editUsernameEditText" />
+
+    <EditText
+        android:id="@+id/editFirstEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/placeHolder"
+        app:layout_constraintBottom_toTopOf="@+id/editLastIntro"
+        app:layout_constraintEnd_toEndOf="@+id/editLastEditText"
+        app:layout_constraintStart_toStartOf="@+id/editLastIntro"
+        app:layout_constraintTop_toBottomOf="@+id/editFirstIntro" />
+
+    <EditText
+        android:id="@+id/editLastEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/placeHolder"
+        app:layout_constraintBottom_toTopOf="@+id/editUsernameIntro"
+        app:layout_constraintEnd_toEndOf="@+id/editUsernameEditText"
+        app:layout_constraintStart_toStartOf="@+id/editUsernameIntro"
+        app:layout_constraintTop_toBottomOf="@+id/editLastIntro" />
+
+    <Button
+        android:id="@+id/editUserReturnButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="62dp"
+        android:text="@string/cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editUserSaveButton" />
+
+    <Button
+        android:id="@+id/editUserSaveButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="19dp"
+        android:text="@string/editSave"
+        app:layout_constraintBottom_toTopOf="@+id/editUserReturnButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPasswordEditText" />
+</androidx.constraintlayout.widget.ConstraintLayout>

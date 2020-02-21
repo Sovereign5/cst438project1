@@ -8,134 +8,121 @@
 
     <TextView
         android:id="@+id/creaccTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="99dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="57dp"
-        android:layout_marginBottom="655dp"
+        android:layout_marginBottom="38dp"
         android:text="Create Account"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/firstNameID"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/firstNameID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="115dp"
-        android:layout_marginBottom="597dp"
+        android:layout_width="107dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="576dp"
         android:text="Enter First Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/lastNameID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="256dp"
+        android:layout_width="106dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="456dp"
         android:text="Enter Last Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/enterLastNameID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="316dp"
+        android:layout_width="213dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="370dp"
         android:ems="10"
+        android:hint="Doe"
         android:inputType="textPersonName"
-        android:text="Doe"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/enterFirstNameID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="172dp"
+        android:layout_width="213dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="514dp"
         android:ems="10"
+        android:hint="John"
         android:inputType="textPersonName"
-        android:text="John"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/userNameID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="107dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
         android:text="Enter User Name"
         app:layout_constraintBottom_toTopOf="@+id/enterUserNameID"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enterLastNameID" />
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/enterUserNameID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="213dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
         android:ems="10"
+        android:hint="username"
         android:inputType="textPersonName"
-        android:text="jd2020"
-        app:layout_constraintBottom_toTopOf="@+id/enterPasswordID"
+        app:layout_constraintBottom_toTopOf="@+id/passwordTextDisplay"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userNameID" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Enter"
+        android:id="@+id/createAccountButtonSubmit"
+        android:layout_width="163dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="55dp"
+        android:text="@string/createAccount"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enterPasswordID" />
-
-    <TextView
-        android:id="@+id/enterPasswordID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="546dp"
-        android:layout_marginBottom="158dp"
-        android:text="Enter Password"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/enterPasswordID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="581dp"
-        android:layout_marginBottom="105dp"
+        android:id="@+id/enterPasswordeditText"
+        android:layout_width="213dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="145dp"
+        android:layout_marginEnd="145dp"
+        android:layout_marginBottom="44dp"
         android:ems="10"
+        android:hint="password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/createAccountButtonSubmit"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/passwordTextDisplay"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="157dp"
+        android:layout_marginEnd="154dp"
+        android:layout_marginBottom="20dp"
+        android:text="Enter Password"
+        app:layout_constraintBottom_toTopOf="@+id/enterPasswordeditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

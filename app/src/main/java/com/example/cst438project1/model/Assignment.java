@@ -113,8 +113,6 @@ public class Assignment {
                 "Earned score: " + earnedScore + "\n" +
                 "Assigned date: " + assignedDate + "\n" +
                 "Due date: " + dueDate + "\n" +
-                "Category ID: " + categoryID + "\n" +
-                "Course ID: " + courseID + "\n" +
-                "Assignment ID: " + assignmentID;
+                "---------------------------------";
     }
 }

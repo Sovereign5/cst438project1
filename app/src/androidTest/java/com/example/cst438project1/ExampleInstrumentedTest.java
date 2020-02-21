@@ -9,9 +9,9 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.example.cst438project1.model.Assignment;
 import com.example.cst438project1.model.AssignmentDAO;
+import com.example.cst438project1.model.AssignmentDatabase;
 import com.example.cst438project1.model.Grade;
 import com.example.cst438project1.model.GradeDAO;
-import com.example.cst438project1.model.AppDatabase;
 
 import org.junit.After;
 import org.junit.Before;
@@ -39,12 +39,12 @@ public class ExampleInstrumentedTest {
 
     private AssignmentDAO assignmentDAO;
     private GradeDAO gradeDAO;
-    private AppDatabase db;
+    private AssignmentDatabase db;
 
     @Before
     public void createDb() {
         db = Room.inMemoryDatabaseBuilder(InstrumentationRegistry.getInstrumentation().getContext(),
-                AppDatabase.class)
+                AssignmentDatabase.class)
                 .allowMainThreadQueries()
                 .build();
 

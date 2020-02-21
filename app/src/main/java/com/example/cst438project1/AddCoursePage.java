@@ -3,6 +3,7 @@ package com.example.cst438project1;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -10,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.cst438project1.DB.AccountLogDAO;
+import com.example.cst438project1.DB.AppDatabase;
 import com.example.cst438project1.DB.CourseDAO;
 import com.example.cst438project1.DB.CourseDatabase;
 import com.example.cst438project1.DB.CourseLog;
@@ -26,7 +29,9 @@ public class AddCoursePage extends AppCompatActivity {
     EditText courseDescription;
 
     Button createCourse;
+    Button returnButton;
 
+    private AccountLogDAO accountLogDAO;
     private CourseDAO courseDao;
     private CourseDatabase courseDatabase;
 
@@ -37,11 +42,16 @@ public class AddCoursePage extends AppCompatActivity {
         setContentView(R.layout.activity_add_course_page);
 
 
-        courseDatabase = Room.inMemoryDatabaseBuilder(this, CourseDatabase.class)
+        courseDatabase = Room.databaseBuilder(this, CourseDatabase.class, CourseDatabase.dbName)
                 .allowMainThreadQueries()
                 .build();
 
         courseDao = courseDatabase.getCourseLogDAO();
+
+        accountLogDAO = Room.databaseBuilder(this, AppDatabase.class, AppDatabase.dbName)
+                .allowMainThreadQueries()
+                .build()
+                .getAccountLogDAO();
 
         courseTitle = (EditText) findViewById(R.id.addCoursePageCourseTitleEditText);
         courseInstructor = (EditText) findViewById(R.id.addCoursePageInstructor);
@@ -49,7 +59,10 @@ public class AddCoursePage extends AppCompatActivity {
         endDate = (EditText) findViewById(R.id.addCourseEndDateEditText);
         courseDescription = (EditText) findViewById(R.id.addCourseDescriptionEditText);
         createCourse = (Button) findViewById(R.id.addCourseCreateCourseButton);
+        returnButton = (Button) findViewById(R.id.addCourseCancelButton);
 
+
+        final AccountLog currUser = accountLogDAO.findAccount(getIntent().getStringExtra("username"),getIntent().getStringExtra("pass"));
 
         createCourse.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,13 +79,26 @@ public class AddCoursePage extends AppCompatActivity {
                 }
                 if(flag) {
                     courseDao.insert(newcourse);
+                    toastMaker("Successfully Created Course");
+                    Intent intent = new Intent(AddCoursePage.this,UserPage.class);
+                    intent.putExtra("username",currUser.getUsername());
+                    intent.putExtra("pass", currUser.getPassword());
+                    startActivity(intent);
                 }
 
             }
         });
 
 
-
+        returnButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AddCoursePage.this,UserPage.class);
+                intent.putExtra("username",currUser.getUsername());
+                intent.putExtra("pass", currUser.getPassword());
+                startActivity(intent);
+            }
+        });
 
     }
 

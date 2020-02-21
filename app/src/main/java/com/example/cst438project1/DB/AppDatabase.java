@@ -7,7 +7,7 @@ import androidx.room.TypeConverters;
 import com.example.cst438project1.AccountLog;
 
 @Database(entities = {AccountLog.class}, version=1)
-@TypeConverters(ArrayListTypeConverter.class)
+@TypeConverters({ArrayListTypeConverterAccounts.class,ArrayListTypeConverterAssignments.class})
 public abstract class AppDatabase extends RoomDatabase {
 
     public static final String dbName ="db-accountlog";

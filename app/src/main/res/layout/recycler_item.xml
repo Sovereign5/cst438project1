@@ -4,15 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="75dp">
+
+    <View
+        android:id="@+id/dividerLine2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/courseTitleDisplay"
-        android:layout_width="410dp"
-        android:layout_height="52dp"
-        android:layout_marginEnd="1dp"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="85dp"
         android:text="@string/placeHolder"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,9 +35,26 @@
         android:id="@+id/courseInstructorDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="250dp"
         android:text="@string/placeHolder"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/courseTitleDisplay"
+        android:textColor="@android:color/background_dark"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/courseTitleDisplay" />
+
+    <Button
+        android:id="@+id/recycleCourseButton"
+        android:layout_width="121dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="14dp"
+        android:text="@string/itemPlaceHolder"
+        app:layout_constraintBottom_toTopOf="@+id/dividerLine2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/courseTitleDisplay"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

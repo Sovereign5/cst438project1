@@ -22,8 +22,8 @@
 
     <EditText
         android:id="@+id/addCoursePageCourseTitleEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="213dp"
+        android:layout_height="45dp"
         android:layout_marginStart="108dp"
         android:layout_marginTop="41dp"
         android:layout_marginEnd="108dp"
@@ -36,8 +36,8 @@
 
     <EditText
         android:id="@+id/addCoursePageInstructor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="213dp"
+        android:layout_height="45dp"
         android:layout_marginStart="108dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="108dp"
@@ -50,8 +50,8 @@
 
     <EditText
         android:id="@+id/addCourseStartDateEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="213dp"
+        android:layout_height="45dp"
         android:layout_marginStart="108dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="108dp"
@@ -64,8 +64,8 @@
 
     <EditText
         android:id="@+id/addCourseEndDateEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="213dp"
+        android:layout_height="45dp"
         android:layout_marginStart="108dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="108dp"
@@ -78,15 +78,17 @@
 
     <EditText
         android:id="@+id/addCourseDescriptionEditText"
-        android:layout_width="226dp"
-        android:layout_height="113dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="97dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="97dp"
+        android:layout_marginBottom="76dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="@string/addCourseDescriptionHint"
         android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/addCourseCreateCourseButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -103,5 +105,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/addCourseCancelButton"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addCourseCreateCourseButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

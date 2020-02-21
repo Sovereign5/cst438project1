@@ -7,14 +7,17 @@
     tools:context=".UserPage">
 
     <TextView
-        android:id="@+id/usernameTextView"
-        android:layout_width="50dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="12dp"
+        android:id="@+id/usernameTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="153dp"
+        android:textColor="@android:color/background_dark"
         android:textSize="20sp"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.116"
         app:layout_constraintStart_toEndOf="@+id/helloTextView"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,6 +28,7 @@
         android:layout_marginStart="146dp"
         android:layout_marginTop="16dp"
         android:text="@string/userdeftext"
+        android:textColor="@android:color/background_dark"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -34,15 +38,15 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="12dp"
-        android:background="@android:color/darker_gray"
+        android:background="@android:color/background_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/helloTextView" />
 
     <Button
         android:id="@+id/addCourseButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="108dp"
+        android:layout_height="48dp"
         android:layout_marginStart="301dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="23dp"
@@ -54,8 +58,8 @@
 
     <Button
         android:id="@+id/deleteCourseButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:text="@string/deleteCourseButton"
@@ -64,13 +68,47 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/userPageRecycler"
-        android:layout_width="344dp"
-        android:layout_height="519dp"
-        android:layout_marginStart="33dp"
+        android:layout_width="339dp"
+        android:layout_height="418dp"
+        android:layout_marginStart="35dp"
         android:layout_marginEnd="33dp"
-        android:layout_marginBottom="37dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.68" />
+
+    <Button
+        android:id="@+id/enrollButtonLink"
+        android:layout_width="163dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="36dp"
+        android:text="@string/enroll"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editUserButton" />
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="101dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="7dp"
+        android:text="@string/logout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/editUserButton"
+        android:layout_width="126dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="36dp"
+        android:text="@string/editUser"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

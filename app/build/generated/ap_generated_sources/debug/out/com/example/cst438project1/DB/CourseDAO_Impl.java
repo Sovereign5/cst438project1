@@ -220,4 +220,48 @@ public final class CourseDAO_Impl implements CourseDAO {
       _statement.release();
     }
   }
+
+  @Override
+  public CourseLog getCourseTitle(String title) {
+    final String _sql = "SELECT * FROM courselog WHERE mTitle = ?";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+    int _argIndex = 1;
+    if (title == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, title);
+    }
+    final Cursor _cursor = __db.query(_statement);
+    try {
+      final int _cursorIndexOfMCourseID = _cursor.getColumnIndexOrThrow("mCourseID");
+      final int _cursorIndexOfMInstructor = _cursor.getColumnIndexOrThrow("mInstructor");
+      final int _cursorIndexOfMTitle = _cursor.getColumnIndexOrThrow("mTitle");
+      final int _cursorIndexOfMDescription = _cursor.getColumnIndexOrThrow("mDescription");
+      final int _cursorIndexOfMStartDate = _cursor.getColumnIndexOrThrow("mStartDate");
+      final int _cursorIndexOfMEndDate = _cursor.getColumnIndexOrThrow("mEndDate");
+      final CourseLog _result;
+      if(_cursor.moveToFirst()) {
+        final String _tmpMInstructor;
+        _tmpMInstructor = _cursor.getString(_cursorIndexOfMInstructor);
+        final String _tmpMTitle;
+        _tmpMTitle = _cursor.getString(_cursorIndexOfMTitle);
+        final String _tmpMDescription;
+        _tmpMDescription = _cursor.getString(_cursorIndexOfMDescription);
+        final String _tmpMStartDate;
+        _tmpMStartDate = _cursor.getString(_cursorIndexOfMStartDate);
+        final String _tmpMEndDate;
+        _tmpMEndDate = _cursor.getString(_cursorIndexOfMEndDate);
+        _result = new CourseLog(_tmpMInstructor,_tmpMTitle,_tmpMDescription,_tmpMStartDate,_tmpMEndDate);
+        final int _tmpMCourseID;
+        _tmpMCourseID = _cursor.getInt(_cursorIndexOfMCourseID);
+        _result.setCourseID(_tmpMCourseID);
+      } else {
+        _result = null;
+      }
+      return _result;
+    } finally {
+      _cursor.close();
+      _statement.release();
+    }
+  }
 }

@@ -9,10 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddCoursePage"></activity>
+        <activity android:name=".DeleteCourse"></activity>
+        <activity android:name=".editAccount" />
+        <activity android:name=".EditCourseActivity" />
+        <activity android:name=".AddAssignment" />
+        <activity android:name=".EnrollActivity" />
+        <activity android:name=".AddCoursePage" />
         <activity android:name=".UserPage" />
         <activity android:name=".ViewCourse" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".CreateAccount" />
+        <activity android:name=".AssignmentActivity" />
+        <activity android:name=".GradeActivity" />
+        <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

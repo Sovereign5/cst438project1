@@ -1,0 +1,125 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "b3f47b1d38e75b4803636ee4c88aabb8",
+    "entities": [
+      {
+        "tableName": "Assignment",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`assignmentID` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `details` TEXT NOT NULL, `maxScore` REAL NOT NULL, `earnedScore` REAL NOT NULL, `assignedDate` TEXT NOT NULL, `dueDate` TEXT NOT NULL, `categoryID` INTEGER NOT NULL, `courseID` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "assignmentID",
+            "columnName": "assignmentID",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "details",
+            "columnName": "details",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "maxScore",
+            "columnName": "maxScore",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "earnedScore",
+            "columnName": "earnedScore",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "assignedDate",
+            "columnName": "assignedDate",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dueDate",
+            "columnName": "dueDate",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "categoryID",
+            "columnName": "categoryID",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "courseID",
+            "columnName": "courseID",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "assignmentID"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Grade",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`gradeID` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `score` INTEGER NOT NULL, `assignmentID` INTEGER NOT NULL, `studentID` INTEGER NOT NULL, `courseID` INTEGER NOT NULL, `dateEarned` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "gradeID",
+            "columnName": "gradeID",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "score",
+            "columnName": "score",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "assignmentID",
+            "columnName": "assignmentID",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "studentID",
+            "columnName": "studentID",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "courseID",
+            "columnName": "courseID",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dateEarned",
+            "columnName": "dateEarned",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "gradeID"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"b3f47b1d38e75b4803636ee4c88aabb8\")"
+    ]
+  }
+}

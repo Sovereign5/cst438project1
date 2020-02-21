@@ -28,6 +28,6 @@ public interface CourseDAO {
     @Query("SELECT * FROM " + CourseDatabase.COURSELOG_TABLE + " WHERE mCourseID = :logID")
     CourseLog getCourseWithId(int logID);
 
-//    @Query("SELECT * FROM " + CourseDatabase.COURSELOG_TABLE + " WHERE mInstructor = :logID")
-//    CourseLog getInstructorWithId(int logID);
+    @Query("SELECT * FROM " + CourseDatabase.COURSELOG_TABLE + " WHERE mTitle = :title")
+    CourseLog getCourseTitle(String title);
 }

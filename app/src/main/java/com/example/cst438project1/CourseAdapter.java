@@ -2,9 +2,11 @@ package com.example.cst438project1;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.cst438project1.DB.CourseLog;
@@ -19,12 +21,14 @@ import androidx.room.Database;
 
 public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder> {
     private List<CourseLog> Dataset;
+    private AccountLog currUser;
 
     Context context;
 
 
-    public CourseAdapter(List<CourseLog> myDataset) {
+    public CourseAdapter(List<CourseLog> myDataset, AccountLog User) {
         Dataset = myDataset;
+        currUser = User;
     }
 
     @NonNull
@@ -59,12 +63,34 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder
 
         TextView courseTitle;
         TextView courseInstructor;
+        Button viewCourseButton;
+
 
         public ViewHolder(@NonNull View item) {
             super(item);
 
             courseTitle = item.findViewById(R.id.courseTitleDisplay);
             courseInstructor = item.findViewById(R.id.courseInstructorDisplay);
+            viewCourseButton = item.findViewById(R.id.recycleCourseButton);
+
+
+            viewCourseButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int position = getAdapterPosition();
+
+                    if(position != RecyclerView.NO_POSITION) {
+                        CourseLog courseLog = Dataset.get(position);
+
+                        Intent intent = new Intent(context,ViewCourse.class);
+                        intent.putExtra("courseTitle",courseLog.getTitle());
+                        intent.putExtra("username",currUser.getUsername());
+                        intent.putExtra("pass",currUser.getPassword());
+                        view.getContext().startActivity(intent);
+
+                    }
+                }
+            });
 
         }
 
@@ -76,7 +102,11 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder
             if(position != RecyclerView.NO_POSITION) {
                 CourseLog courseLog = Dataset.get(position);
 
-                // push course info through to next page
+                Intent intent = new Intent(context,ViewCourse.class);
+                intent.putExtra("courseTitle",courseLog.getTitle());
+                intent.putExtra("username",currUser.getUsername());
+                intent.putExtra("pass",currUser.getPassword());
+                v.getContext().startActivity(intent);
 
             }
 

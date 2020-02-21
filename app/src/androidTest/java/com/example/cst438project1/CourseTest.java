@@ -73,7 +73,11 @@ public class CourseTest {
         assertEquals(1, DBvalue.size());
 
         assertEquals(testValue.getDescription(), DBvalue.get(0).getDescription());
-        assertEquals(testValue, DBvalue.get(0));
+        assertEquals(testValue.getInstructor(), DBvalue.get(0).getInstructor());
+        assertEquals(testValue.getTitle(), DBvalue.get(0).getTitle());
+        assertEquals(testValue.getStartDate(), DBvalue.get(0).getStartDate());
+        assertEquals(testValue.getEndDate(), DBvalue.get(0).getEndDate());
+
     }
 
 

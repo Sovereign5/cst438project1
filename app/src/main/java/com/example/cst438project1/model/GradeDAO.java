@@ -1,5 +1,8 @@
 package com.example.cst438project1.model;
 
+import com.example.cst438project1.AccountLog;
+import com.example.cst438project1.DB.AppDatabase;
+
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -20,7 +23,10 @@ public interface GradeDAO {
     @Delete
     void deleteGrade(Grade grade);
 
-    @Query("select * from " + AppDatabase.GRADE_TABLE)
+    @Query("select * from " + AssignmentDatabase.GRADE_TABLE)
     List<Grade> getAllGrades();
+
+    @Query("SELECT * FROM " + AssignmentDatabase.GRADE_TABLE + " WHERE courseID LIKE :courseID AND " + " studentID LIKE :studentID ")
+    Grade findGrade(int courseID, int studentID);
 
 }

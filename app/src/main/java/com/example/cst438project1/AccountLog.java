@@ -6,8 +6,10 @@ import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
 
 import com.example.cst438project1.DB.AppDatabase;
-import com.example.cst438project1.DB.ArrayListTypeConverter;
+import com.example.cst438project1.DB.ArrayListTypeConverterAccounts;
+import com.example.cst438project1.DB.ArrayListTypeConverterAssignments;
 import com.example.cst438project1.DB.CourseLog;
+import com.example.cst438project1.model.Assignment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,11 +35,15 @@ public class AccountLog {
     private String lastname;
 
     @ColumnInfo(name = "courses")
-    @TypeConverters(ArrayListTypeConverter.class)
+    @TypeConverters(ArrayListTypeConverterAccounts.class)
     private List<CourseLog> userCourses;
+
+    @TypeConverters(ArrayListTypeConverterAssignments.class)
+    private List<Assignment> userAssignments;
 
 
     public AccountLog(String firstname, String lastname, String username, String password){
+
 
         this.username = username;
         this.password = password;
@@ -45,6 +51,7 @@ public class AccountLog {
         this.lastname = lastname;
 
         userCourses = new ArrayList<>();
+        userAssignments = new ArrayList<>();
 
     }
 
@@ -103,5 +110,15 @@ public class AccountLog {
         userCourses.add(newCourse);
     }
 
+    public List<Assignment> getUserAssignments() {
+        return userAssignments;
+    }
 
+    public void setUserAssignments(List<Assignment> userAssignments) {
+        this.userAssignments = userAssignments;
+    }
+
+    public void insertAssignment(Assignment newAssignment) {
+        userAssignments.add(newAssignment);
+    }
 }
